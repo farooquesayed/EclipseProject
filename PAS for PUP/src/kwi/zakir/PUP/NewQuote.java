@@ -2,9 +2,6 @@ package kwi.zakir.PUP;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
-
-import javax.swing.JOptionPane;
-
 import kwi.zakir.Common.CommonLibrary;
 
 import org.openqa.selenium.By;
@@ -12,8 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class NewQuote  extends CommonLibrary{
 
@@ -76,9 +71,9 @@ public class NewQuote  extends CommonLibrary{
 	public void insurance_information() {
 		DoSelecti("UnderlyingInsurance_LimitTypeId", 1);
 		DoKeyi("UnderlyingInsurance_EffectiveDate", CustomDate(-7, false));
+		DoKeyi("UnderlyingInsurance_Limit", "555");
 		DoSelecti("UnderlyingInsurance_InsuranceCarrierId", 3);
 	//	DoClicki("UnderlyingInsurance_ExpirationDate");
-		DoKeyi("UnderlyingInsurance_Limit", "555");
 		DoKeyi("UnderlyingInsurance_PolicyNumber", "POL1234567");
 				
 	}

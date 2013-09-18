@@ -1,6 +1,5 @@
 package kwi.zakir.PUP;
 
-import javax.swing.JOptionPane;
 
 import kwi.zakir.Common.CommonLibrary;
 
