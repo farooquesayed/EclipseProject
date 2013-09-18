@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="kwi.zakir.HO.AZ_HomeOwner">
+        <methods>
+          <include name="Coverage_Information"/>
+          <include name="IssuePolicy" invocation-numbers="0"/>
+          <include name="Revalidation_Insured_Information"/>
+          <include name="QuoteSummary"/>
+          <include name="property_Information"/>
+          <include name="StartQuote_WithAgency"/>
+          <include name="General_PrimaryResidence_Information"/>
+          <include name="AdditionalInsured"/>
+          <include name="Additional_Eligibility_Questions"/>
+          <include name="cleanup"/>
+          <include name="Insured_Information"/>
+          <include name="CoverageAndRates"/>
+          <include name="initialization"/>
+          <include name="Add_Mortgage"/>
+        </methods>
+      </class> <!-- kwi.zakir.HO.AZ_HomeOwner -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

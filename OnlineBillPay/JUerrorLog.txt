@@ -1,0 +1,7 @@
+Started InternetExplorerDriver server (32-bit)
+2.32.3.0
+Listening on port 38486
+Jun 12, 2013 1:51:21 PM org.apache.http.impl.client.DefaultRequestDirector tryExecute
+INFO: I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+Jun 12, 2013 1:51:21 PM org.apache.http.impl.client.DefaultRequestDirector tryExecute
+INFO: Retrying request

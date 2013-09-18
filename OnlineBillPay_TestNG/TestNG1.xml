@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ 
+<suite name="OBP Suite" verbose="1" >
+
+  <test name="Chrome OBP"   >
+    <classes>
+       <class name="InternetExplorer" />
+
+   </classes>
+
+
+ </test>
+</suite>

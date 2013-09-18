@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OBP Suite]">
+  <test name="Chrome OBP(failed)">
+    <classes>
+      <class name="InternetExplorer">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="fInternetExplorer"/>
+        </methods>
+      </class> <!-- InternetExplorer -->
+    </classes>
+  </test> <!-- Chrome OBP(failed) -->
+</suite> <!-- Failed suite [OBP Suite] -->

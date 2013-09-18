@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ 
+<suite name="Suite1" verbose="1" >
+
+ <parameter name="clsVar2"  value="Class2"/>
+   <test name="Test Case 1" >
+    <classes>
+       <class name="com.zakir.java.Class3" />
+    </classes>
+  </test>
+
+</suite>

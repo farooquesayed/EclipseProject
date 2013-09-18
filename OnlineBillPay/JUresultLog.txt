@@ -1,0 +1,71 @@
+Running Chrome browser Test 
+Running Firefox browser Test 
+Running Internet Explorer browser Test 
+JUnit version 4.11
+.TEST STARTED FOR ONLINE BILL PAY.
+Login in to Dev site: https://dev-pay.cnico.com
+Entering All Policy Search method
+Total test time = 17 seconds
+E
+Time: 17.518
+There was 1 failure:
+1) _Test(InternetExplorer)
+org.openqa.selenium.NoSuchWindowException: Unable to find element on closed window (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2 milliseconds
+Build info: version: '2.32.0', revision: '6c40c18', time: '2013-04-09 17:22:56'
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_11'
+Session ID: 94c66a9d-21ad-4ea6-8c43-94065449b1a4
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, elementScrollBehavior=0, javascriptEnabled=true, enablePersistentHover=true, ignoreZoomSetting=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=8, cssSelectorsEnabled=true, ignoreProtectedModeSettings=false, allowAsynchronousJavaScript=true, requireWindowFocus=false, handlesAlerts=true, initialBrowserUrl=, nativeEvents=true, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:187)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:348)
+	at org.openqa.selenium.By$ById.findElement(By.java:216)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at PolicySearch.clickContinue(PolicySearch.java:36)
+	at PolicySearch.allPolicySearch(PolicySearch.java:25)
+	at DataDrivenTest.runOnlineBillPay(DataDrivenTest.java:40)
+	at InternetExplorer._Test(InternetExplorer.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:96)
+	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:47)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:40)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+

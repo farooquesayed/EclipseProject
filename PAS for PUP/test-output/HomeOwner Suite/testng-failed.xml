@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [HomeOwner Suite]">
+  <parameter name="" value="false"/>
+  <parameter name="isNonCNI" value="false"/>
+  <parameter name="baseURL" value="http://pasqa"/>
+  <parameter name="isCustInfo" value="true"/>
+  <parameter name="isCovPrem" value="false"/>
+  <parameter name="Browser" value="FF"/>
+  <parameter name="isAgencySelection" value="true"/>
+  <parameter name="isCNIauto" value="true"/>
+  <parameter name="isGAQ" value="true"/>
+  <parameter name="isHHM" value="true"/>
+  <parameter name="isProp" value="false"/>
+  <parameter name="isWatercraft" value="false"/>
+  <parameter name="isInsProd" value="true"/>
+  <parameter name="isRecVeh" value="false"/>
+  <test name="PAS for PUP Iteration 01(failed)">
+    <classes>
+      <class name="kwi.zakir.PUP.Iteration01">
+        <methods>
+          <include name="GeneralAcceptabilityQuestions"/>
+          <include name="StartQuote_WithAgency"/>
+          <include name="HouseholdMember"/>
+          <include name="cleanup"/>
+          <include name="CoveragePremium"/>
+          <include name="RecreationalVehicle"/>
+          <include name="InsuranceProduct"/>
+          <include name="NonCNIVehicle"/>
+          <include name="CustomerInformation"/>
+          <include name="Properties"/>
+          <include name="initialization" invocation-numbers="0"/>
+          <include name="CNI_Auto_Policy"/>
+          <include name="Watercraft"/>
+        </methods>
+      </class> <!-- kwi.zakir.PUP.Iteration01 -->
+    </classes>
+  </test> <!-- PAS for PUP Iteration 01(failed) -->
+</suite> <!-- Failed suite [HomeOwner Suite] -->

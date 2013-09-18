@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [HomeOwner Suite]">
+  <parameter name="isCoverageAndRates" value="true"/>
+  <parameter name="isAdditionalInsured" value="false"/>
+  <parameter name="baseURL" value="http://quincy/agency/index.cfm?request=ValidateIAISAgent&amp;username=zakirs"/>
+  <parameter name="isIssuePolicy" value="false"/>
+  <parameter name="isQuoteSummary" value="false"/>
+  <parameter name="isAdditional_Eligibility_Questions" value="false"/>
+  <parameter name="isInsured_Information" value="true"/>
+  <parameter name="Browser" value="CR"/>
+  <parameter name="isGeneral_PrimaryResidence_Information" value="true"/>
+  <parameter name="isAgencySelection" value="true"/>
+  <parameter name="isAdd_Mortgage" value="false"/>
+  <parameter name="isRevalidation_Insured_Information" value="false"/>
+  <parameter name="isproperty_Information" value="true"/>
+  <parameter name="isCoverage_Information" value="true"/>
+  <test name="HO NB Policy(failed)">
+    <classes>
+      <class name="kwi.zakir.HO.AZ_HomeOwner">
+        <methods>
+          <include name="property_Information"/>
+          <include name="AdditionalInsured"/>
+          <include name="General_PrimaryResidence_Information"/>
+          <include name="StartQuote_WithAgency"/>
+          <include name="Additional_Eligibility_Questions"/>
+          <include name="Coverage_Information"/>
+          <include name="Insured_Information" invocation-numbers="0"/>
+          <include name="IssuePolicy"/>
+          <include name="Revalidation_Insured_Information"/>
+          <include name="CoverageAndRates"/>
+          <include name="QuoteSummary"/>
+          <include name="initialization"/>
+          <include name="Add_Mortgage"/>
+        </methods>
+      </class> <!-- kwi.zakir.HO.AZ_HomeOwner -->
+    </classes>
+  </test> <!-- HO NB Policy(failed) -->
+</suite> <!-- Failed suite [HomeOwner Suite] -->
