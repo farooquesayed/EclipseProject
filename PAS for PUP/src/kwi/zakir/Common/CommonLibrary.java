@@ -71,6 +71,7 @@ public class CommonLibrary {
 	}
 
 	public void DoKeyi(String objID, String val) {
+		commDRIVER.findElement(By.id(objID)).clear();
 		commDRIVER.findElement(By.id(objID)).sendKeys(val);
 	}
 

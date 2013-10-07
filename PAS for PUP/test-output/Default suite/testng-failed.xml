@@ -7,11 +7,11 @@
         <methods>
           <include name="GeneralAcceptabilityQuestions"/>
           <include name="StartQuote_WithAgency"/>
-          <include name="HouseholdMember" invocation-numbers="0"/>
+          <include name="HouseholdMember"/>
           <include name="cleanup"/>
           <include name="CoveragePremium"/>
           <include name="RecreationalVehicle"/>
-          <include name="InsuranceProduct"/>
+          <include name="InsuranceProduct" invocation-numbers="0"/>
           <include name="NonCNIVehicle"/>
           <include name="CustomerInformation"/>
           <include name="Properties"/>

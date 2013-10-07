@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import kwi.zakir.Common.CommonLibrary;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -58,19 +59,19 @@ public class NewQuote  extends CommonLibrary{
 		DoClicki("ContinueLink");
 	}
 	
-	public void Properties() {
+	public void Properties(int dateValue) {
 		System.out.println("Entering Property information");
 		
 		DoKeyi("Property_YearBuilt", "2010");
-		insurance_information();
+		insurance_information(dateValue);
 		
 		DoClicki("NoLink");
 		WaitProperty_Click("ContinueLink");
 	}
 	
-	public void insurance_information() {
+	public void insurance_information(int dateValue) {
 		DoSelecti("UnderlyingInsurance_LimitTypeId", 1);
-		DoKeyi("UnderlyingInsurance_EffectiveDate", CustomDate(-7, false));
+		DoKeyi("UnderlyingInsurance_EffectiveDate", CustomDate(dateValue-7, false));
 		DoKeyi("UnderlyingInsurance_Limit", "555");
 		DoSelecti("UnderlyingInsurance_InsuranceCarrierId", 3);
 	//	DoClicki("UnderlyingInsurance_ExpirationDate");
@@ -87,7 +88,7 @@ public class NewQuote  extends CommonLibrary{
 		DoClicki("ContinueLink");
 	}
 	
-	public void CNI_Auto_Policy() {
+	public void CNI_Auto_Policy(int dateValue) {
 		System.out.println("Entering CNI auto policy information");
 		DoClicki("NumberOfVehicles");
 		DoKeyi("NumberOfVehicles", "1");
@@ -96,7 +97,7 @@ public class NewQuote  extends CommonLibrary{
 		DoKeyi("Limit_octet_2", "500");
 		DoKeyi("Limit_octet_3", "100");
 		DoKeyi("PersonalAutoPolicyNumber", "PPA1234679");
-		DoKeyi("EffectiveDate", CustomDate(-7, false));
+		DoKeyi("EffectiveDate", CustomDate(dateValue-7, false));
 		
 		WaitProperty_Click("ContinueLink");
 	}
@@ -111,9 +112,14 @@ public class NewQuote  extends CommonLibrary{
 		DoClicki("ContinueLink");
 	}
 	
-	public void Insurance_Product() {
+	public void Insurance_Product(int dateValue) {
 		System.out.println("Selecting Product line = PUP");
-		DoClicki("ContinueLink");
+		DoKeyi("EffectiveDate", CustomDate(dateValue, true) + Keys.TAB);
+		
+		if(dateValue<=0) {
+			addDelay(3000);
+		}
+		DoClicki("Continue");
 	}
 	
 	

@@ -45,11 +45,11 @@ public class Iteration01 {
 	}
 
 	@Test(dependsOnMethods = { "CustomerInformation" })
-	@Parameters ({"isInsProd"})
-	public void InsuranceProduct(@Optional("true") boolean isTrue) {
+	@Parameters ({"isInsProd", "EffDate"})
+	public void InsuranceProduct(@Optional("true") boolean isTrue, @Optional("-7") int dateValue) {
 		System.out.println("InsuranceProduct");
 		if(isTrue) {
-			objPage.Insurance_Product();
+			objPage.Insurance_Product(dateValue);
 		}
 	}
 	
@@ -63,11 +63,11 @@ public class Iteration01 {
 	}
 	
 	@Test(dependsOnMethods = { "GeneralAcceptabilityQuestions" })
-	@Parameters ({"isCNIauto"})
-	public void CNI_Auto_Policy(@Optional("true") boolean isTrue) {
+	@Parameters ({"isCNIauto", "EffDate"})
+	public void CNI_Auto_Policy(@Optional("true") boolean isTrue, @Optional("-7") int dateValue) {
 		System.out.println("CNI_Auto_Policy");
 		if(isTrue) {
-			objPage.CNI_Auto_Policy();
+			objPage.CNI_Auto_Policy(dateValue);
 		}
 	}
 	
@@ -83,11 +83,11 @@ public class Iteration01 {
 
 	
 	@Test(dependsOnMethods = { "HouseholdMember" })
-	@Parameters ({"isProp"})
-	public void Properties(@Optional("true") boolean isTrue) {
+	@Parameters ({"isProp", "EffDate"})
+	public void Properties(@Optional("true") boolean isTrue, @Optional("-7") int dateValue) {
 		System.out.println("Properties");
 		if(isTrue) {
-			objPage.Properties();
+			objPage.Properties(dateValue);
 		}
 	}
 	
