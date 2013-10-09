@@ -4,6 +4,7 @@ package kwi.zakir.PUP;
 import kwi.zakir.Common.CommonLibrary;
 
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -12,17 +13,23 @@ public class Iteration01 {
 	
 	private NewQuote objPage = new NewQuote();
 	
+	@BeforeTest
+	public void initialization() {
+		System.out.println("initialization");
+		objPage.setJSONobj();
+	}
+	
 	@Test
 	@Parameters ({"Browser", "baseURL"})
-	public void initialization(@Optional("CR") String Browser, @Optional("http://pasqa/pup") String baseURL) {
-		System.out.println("initialization");
+	public void Login(@Optional("CR") String Browser, @Optional("http://pasqa/pup") String baseURL) {
+		System.out.println("Login");
 
 		objPage.setBrowserdriver(Browser);
 		objPage.devLogin(baseURL);
 		
 	}
 
-	@Test(dependsOnMethods = { "initialization" })
+	@Test(dependsOnMethods = { "Login" })
 	@Parameters ({"isAgencySelection"})
 	public void StartQuote_WithAgency(@Optional("true") boolean isTrue) {
 		System.out.println("StartQuote_WithAgency");

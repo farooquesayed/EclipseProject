@@ -11,32 +11,10 @@ import org.json.simple.parser.ParseException;
 public class Main {
      public static void main(String[] args) {
 
-    JSONParser parser = new JSONParser();
-
-        JSONArray a;
-		try {
-          JSONObject person = (JSONObject) parser.parse(new FileReader("c:\\jsontest.txt"));
-
-          String fName = (String) person.get("fName");
-          System.out.println(fName);
-
-          String mName = (String) person.get("mName");
-          System.out.println(mName);
-
-          String lName = (String) person.get("lName");
-          System.out.println(lName);
-
-        } catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-       
-     } 
-
+    	Class3 zak = new Class3();
+    	zak.setJSONobj();
+    	zak.getJSONvalue("fName");
+    	zak.getJSONvalue("mName");
+    	zak.getJSONvalue("Year");
+     }
 }

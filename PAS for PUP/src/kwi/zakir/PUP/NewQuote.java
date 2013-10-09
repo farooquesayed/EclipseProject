@@ -1,9 +1,16 @@
 package kwi.zakir.PUP;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import kwi.zakir.Common.CommonLibrary;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +20,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class NewQuote  extends CommonLibrary{
 
+	public JSONParser parser = new JSONParser();
+	public static JSONObject pupJSON;
 	private WebDriver DRIVER; 
 
 	public void Non_CNI_Vehicle() {
@@ -41,7 +50,7 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void Name_Insured_Trustee() {
 		System.out.println("Entering Name Insured & Trustee");
-		DoSelecti("InsuredTypeID", 1);
+		DoSelecti("InsuredTypeID", Integer.parseInt(getJSONvalue("InsuredTypeId")));
 		DoClicki("MailingAddressSameAsPrimary");
 
 		DoClicki("ContinueLink");
@@ -49,12 +58,12 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void Payment_Method() {
 		System.out.println("Entering Payment Method");
-		DoSelecti("PaymentTypeId", 1);
-		DoSelecti("CardTypeId", 1);
-		DoKeyi("CardNumber", "4111111111111111");
-		DoKeyi("SecurityCode", "111");
-		DoSelecti("Month", 2);
-		DoSelecti("Year", 2);
+		DoSelecti("PaymentTypeId", Integer.parseInt(getJSONvalue("paymentTypeId")));
+		DoSelecti("CardTypeId", Integer.parseInt(getJSONvalue("cardTypeId")));
+		DoKeyi("CardNumber", getJSONvalue("CardNumber"));
+		DoKeyi("SecurityCode", getJSONvalue("SecurityCode"));
+		DoSelecti("Month", Integer.parseInt(getJSONvalue("Month")));
+		DoSelecti("Year", Integer.parseInt(getJSONvalue("Year")));
 
 		DoClicki("ContinueLink");
 	}
@@ -62,7 +71,7 @@ public class NewQuote  extends CommonLibrary{
 	public void Properties(int dateValue) {
 		System.out.println("Entering Property information");
 		
-		DoKeyi("Property_YearBuilt", "2010");
+		DoKeyi("Property_YearBuilt", getJSONvalue("propYearBuilt"));
 		insurance_information(dateValue);
 		
 		DoClicki("NoLink");
@@ -70,19 +79,19 @@ public class NewQuote  extends CommonLibrary{
 	}
 	
 	public void insurance_information(int dateValue) {
-		DoSelecti("UnderlyingInsurance_LimitTypeId", 1);
+		DoSelecti("UnderlyingInsurance_LimitTypeId", Integer.parseInt(getJSONvalue("InsLimitTypeId")));
 		DoKeyi("UnderlyingInsurance_EffectiveDate", CustomDate(dateValue-7, false));
-		DoKeyi("UnderlyingInsurance_Limit", "555");
-		DoSelecti("UnderlyingInsurance_InsuranceCarrierId", 3);
+		DoKeyi("UnderlyingInsurance_Limit", getJSONvalue("insCLimit"));
+		DoSelecti("UnderlyingInsurance_InsuranceCarrierId", Integer.parseInt(getJSONvalue("InsCarrierId")));
 	//	DoClicki("UnderlyingInsurance_ExpirationDate");
-		DoKeyi("UnderlyingInsurance_PolicyNumber", "POL1234567");
+		DoKeyi("UnderlyingInsurance_PolicyNumber", getJSONvalue("propPolicy"));
 				
 	}
 	
 	public void Household_Member() {
 		System.out.println("Entering household member");
 		
-		DoKeyi("HouseholdMember_DOB", "02/02/1970");
+		DoKeyi("HouseholdMember_DOB", getJSONvalue("hhmDOB"));
 		
 		DoClicki("NoLink");
 		DoClicki("ContinueLink");
@@ -91,12 +100,12 @@ public class NewQuote  extends CommonLibrary{
 	public void CNI_Auto_Policy(int dateValue) {
 		System.out.println("Entering CNI auto policy information");
 		DoClicki("NumberOfVehicles");
-		DoKeyi("NumberOfVehicles", "1");
+		DoKeyi("NumberOfVehicles", getJSONvalue("NoOfCNIVeh"));
 		
-		DoKeyi("Limit_octet_1", "250");
-		DoKeyi("Limit_octet_2", "500");
-		DoKeyi("Limit_octet_3", "100");
-		DoKeyi("PersonalAutoPolicyNumber", "PPA1234679");
+		DoKeyi("Limit_octet_1", getJSONvalue("insSplitLimit1"));
+		DoKeyi("Limit_octet_2", getJSONvalue("insSplitLimit2"));
+		DoKeyi("Limit_octet_3", getJSONvalue("insSplitLimit3"));
+		DoKeyi("PersonalAutoPolicyNumber", getJSONvalue("PAPolicyNumber"));
 		DoKeyi("EffectiveDate", CustomDate(dateValue-7, false));
 		
 		WaitProperty_Click("ContinueLink");
@@ -125,20 +134,20 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void Customer_Information() {
 		System.out.println("Entering Customer Information");
-		DoKeyi("FirstName", "WebDriver");
-		DoKeyi("MiddleName", "S");
-		DoKeyi("LastName", "Automation");
+		DoKeyi("FirstName", getJSONvalue("fName"));
+		DoKeyi("MiddleName", getJSONvalue("mName"));
+		DoKeyi("LastName", getJSONvalue("lName"));
 		
-		DoSelecti("PrimaryPhone_PhoneTypeId", 1);
-		DoKeyi("EMail", "zakirsayed@cnico.com");
+		DoSelecti("PrimaryPhone_PhoneTypeId", Integer.parseInt(getJSONvalue("phnType")));
+		DoKeyi("EMail", getJSONvalue("EMail"));
 		
-		DoKeyi("PrimaryAddress_StreetNumber", "12200");
-		DoSelecti("PrimaryAddress_StreetDirectionTypeId", 1);
-		DoKeyi("PrimaryAddress_StreetName", "Sylvan");
-		DoSelecti("PrimaryAddress_StreetTypeId", 1);
-		DoKeyi("PrimaryAddress_UnitNumber", "555");
-		DoKeyi("PrimaryAddress_ZipCode", "91205");
-		DoKeyi("PrimaryPhone_PhoneNumber", "8187600880");
+		DoKeyi("PrimaryAddress_StreetNumber", getJSONvalue("StreetNumber"));
+		DoSelecti("PrimaryAddress_StreetDirectionTypeId", Integer.parseInt(getJSONvalue("StreetDirection")));
+		DoKeyi("PrimaryAddress_StreetName", getJSONvalue("StreetName"));
+		DoSelecti("PrimaryAddress_StreetTypeId", Integer.parseInt(getJSONvalue("StreetType")));
+		DoKeyi("PrimaryAddress_UnitNumber", getJSONvalue("UnitNumber"));
+		DoKeyi("PrimaryAddress_ZipCode", getJSONvalue("ZipCode"));
+		DoKeyi("PrimaryPhone_PhoneNumber", getJSONvalue("phnNumber"));
 		
 		DoClicki("ContinueLink");
 	}
@@ -151,7 +160,7 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void SelectAgency() {
 		System.out.println("Selecting Agency");
-		DoSelectn("AgencyBranch", 6);
+		DoSelectn("AgencyBranch", Integer.parseInt(getJSONvalue("AgencyBranchId")));
 		DoClicki("ContinueLink");
 	}
 	
@@ -190,6 +199,28 @@ public class NewQuote  extends CommonLibrary{
 
 	}
 
+	public void setJSONobj() {
+        JSONArray a;
+		try {
+			a = (JSONArray) parser.parse(new FileReader("./bin/PAS_PUP.json"));
+	        pupJSON = (JSONObject) a.get(0);
+		} catch (FileNotFoundException e) {
+			System.out.println("File not found" + e.getMessage());
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		};
+	}
 	
+	
+	public static String getJSONvalue(String id) {
+		String jsonData = pupJSON.get(id).toString();
+        System.out.println(jsonData);
+        return jsonData;
+	}	
 	
 }

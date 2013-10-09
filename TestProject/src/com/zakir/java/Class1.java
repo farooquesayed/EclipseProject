@@ -16,6 +16,7 @@ public abstract class Class1
 		System.out.println("Printing from Zakir abstract class");
 		return 3;
 	}
+	
 }
 
 

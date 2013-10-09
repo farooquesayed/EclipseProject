@@ -1,0 +1,42 @@
+[
+  {
+    "fName":"zakir",
+    "mName":"V",
+    "lName":"sayed",
+    "phnType":"1",
+    "phnNumber":"323-472-9999",
+    "EMail":"zakirsayed@cnico.com",
+    "StreetNumber":"12200",
+    "StreetDirection":"2",
+    "StreetName":"Sylvan",
+    "StreetType":"1",
+    "UnitNumber":"333",
+    "ZipCode":"91025",
+    "ZipExt":"1111",
+    "AgencyBranchId": "6",
+    "InsuredTypeId":1,
+
+
+    "propYearBuilt": "2010",
+    "InsLimitTypeId":1,
+    "InsCarrierId": "3",
+    "insCLimit":"555",
+    "insSplitLimit1": "250",
+    "insSplitLimit2": "500",
+    "insSplitLimit3": "100",
+    "PAPolicyNumber": "PPA1234567",
+    "propPolicy": "POL123456",
+    "hhmDOB":"02/02/1970",
+    "NoOfCNIVeh":1,
+
+
+    "paymentTypeId":"1",
+    "cardTypeId": "1",
+    "CardNumber": "4111111111111111",
+    "SecurityCode": "111",
+    "Month": "2",
+    "Year": 2
+  }
+  
+
+]
