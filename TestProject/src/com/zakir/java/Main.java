@@ -1,47 +1,42 @@
 package com.zakir.java;
 
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+public class Main {
+     public static void main(String[] args) {
 
-public class Main implements Class2 {
+    JSONParser parser = new JSONParser();
 
-	public static WebDriver DRIVER; 
-	
-	
-	public static void main(String[] args) {
-		
-		Class2 zakTest = new Main();
-		zakTest.printZakirfromClass2();
-		
-		
-		 
-		 
-	}
+        JSONArray a;
+		try {
+          JSONObject person = (JSONObject) parser.parse(new FileReader("c:\\jsontest.txt"));
 
+          String fName = (String) person.get("fName");
+          System.out.println(fName);
 
-	@Override
-	public void printZakirfromClass2() {
-		System.out.println("Priting from override class");
-		
-	}
+          String mName = (String) person.get("mName");
+          System.out.println(mName);
 
+          String lName = (String) person.get("lName");
+          System.out.println(lName);
 
-	@Override
-	public void zakir(int zak, String zak1) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	
+        } catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+       
+     } 
 
 }
