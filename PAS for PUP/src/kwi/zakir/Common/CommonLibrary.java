@@ -20,7 +20,7 @@ public class CommonLibrary {
 
 
 	public void WaitProperty_Click(String ID) {
-		WebDriverWait wait = new WebDriverWait(commDRIVER, 60000);
+		WebDriverWait wait = new WebDriverWait(commDRIVER, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(By.id(ID)));
 		DoClicki(ID);
 	}

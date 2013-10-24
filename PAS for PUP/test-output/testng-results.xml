@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="14" passed="14">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="75648" started-at="2013-10-09T21:27:35Z" finished-at="2013-10-09T21:28:50Z">
+  <suite name="Default suite" duration-ms="196625" started-at="2013-10-24T16:42:34Z" finished-at="2013-10-24T16:45:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="75648" started-at="2013-10-09T21:27:35Z" finished-at="2013-10-09T21:28:50Z">
+    <test name="Default test" duration-ms="196625" started-at="2013-10-24T16:42:34Z" finished-at="2013-10-24T16:45:51Z">
       <class name="kwi.zakir.PUP.Iteration01">
-        <test-method status="PASS" signature="initialization()[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="initialization" is-config="true" duration-ms="19" started-at="2013-10-09T14:27:35Z" finished-at="2013-10-09T14:27:35Z">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="initialization" is-config="true" duration-ms="15" started-at="2013-10-24T09:42:34Z" finished-at="2013-10-24T09:42:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="Login" duration-ms="6401" started-at="2013-10-09T14:27:35Z" finished-at="2013-10-09T14:27:41Z">
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="Login" duration-ms="5771" started-at="2013-10-24T09:42:34Z" finished-at="2013-10-24T09:42:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[CR]]>
+                <![CDATA[IE]]>
               </value>
             </param>
             <param index="1">
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="StartQuote_WithAgency(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="StartQuote_WithAgency" duration-ms="857" started-at="2013-10-09T14:27:41Z" depends-on-methods="kwi.zakir.PUP.Iteration01.Login" finished-at="2013-10-09T14:27:42Z">
+        <test-method status="PASS" signature="StartQuote_WithAgency(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="StartQuote_WithAgency" duration-ms="3672" started-at="2013-10-24T09:42:40Z" depends-on-methods="kwi.zakir.PUP.Iteration01.Login" finished-at="2013-10-24T09:42:44Z">
           <params>
             <param index="0">
               <value>
@@ -38,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartQuote_WithAgency -->
-        <test-method status="PASS" signature="CustomerInformation(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="CustomerInformation" duration-ms="2561" started-at="2013-10-09T14:27:42Z" depends-on-methods="kwi.zakir.PUP.Iteration01.StartQuote_WithAgency" finished-at="2013-10-09T14:27:44Z">
+        <test-method status="PASS" signature="CustomerInformation(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="CustomerInformation" duration-ms="8690" started-at="2013-10-24T09:42:44Z" depends-on-methods="kwi.zakir.PUP.Iteration01.StartQuote_WithAgency" finished-at="2013-10-24T09:42:53Z">
           <params>
             <param index="0">
               <value>
@@ -49,7 +49,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CustomerInformation -->
-        <test-method status="PASS" signature="InsuranceProduct(boolean, int)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="InsuranceProduct" duration-ms="4119" started-at="2013-10-09T14:27:44Z" depends-on-methods="kwi.zakir.PUP.Iteration01.CustomerInformation" finished-at="2013-10-09T14:27:49Z">
+        <test-method status="PASS" signature="InsuranceProduct(boolean, int)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="InsuranceProduct" duration-ms="6205" started-at="2013-10-24T09:42:53Z" depends-on-methods="kwi.zakir.PUP.Iteration01.CustomerInformation" finished-at="2013-10-24T09:42:59Z">
           <params>
             <param index="0">
               <value>
@@ -65,7 +65,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InsuranceProduct -->
-        <test-method status="PASS" signature="GeneralAcceptabilityQuestions(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="GeneralAcceptabilityQuestions" duration-ms="2401" started-at="2013-10-09T14:27:49Z" depends-on-methods="kwi.zakir.PUP.Iteration01.InsuranceProduct" finished-at="2013-10-09T14:27:51Z">
+        <test-method status="PASS" signature="GeneralAcceptabilityQuestions(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="GeneralAcceptabilityQuestions" duration-ms="8508" started-at="2013-10-24T09:42:59Z" depends-on-methods="kwi.zakir.PUP.Iteration01.InsuranceProduct" finished-at="2013-10-24T09:43:07Z">
           <params>
             <param index="0">
               <value>
@@ -76,7 +76,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GeneralAcceptabilityQuestions -->
-        <test-method status="PASS" signature="CNI_Auto_Policy(boolean, int)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="CNI_Auto_Policy" duration-ms="1676" started-at="2013-10-09T14:27:51Z" depends-on-methods="kwi.zakir.PUP.Iteration01.GeneralAcceptabilityQuestions" finished-at="2013-10-09T14:27:53Z">
+        <test-method status="PASS" signature="CNI_Auto_Policy(boolean, int)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="CNI_Auto_Policy" duration-ms="5888" started-at="2013-10-24T09:43:07Z" depends-on-methods="kwi.zakir.PUP.Iteration01.GeneralAcceptabilityQuestions" finished-at="2013-10-24T09:43:13Z">
           <params>
             <param index="0">
               <value>
@@ -92,7 +92,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CNI_Auto_Policy -->
-        <test-method status="PASS" signature="HouseholdMember(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="HouseholdMember" duration-ms="1881" started-at="2013-10-09T14:27:53Z" depends-on-methods="kwi.zakir.PUP.Iteration01.CNI_Auto_Policy" finished-at="2013-10-09T14:27:55Z">
+        <test-method status="PASS" signature="HouseholdMember(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="HouseholdMember" duration-ms="113454" started-at="2013-10-24T09:43:13Z" depends-on-methods="kwi.zakir.PUP.Iteration01.CNI_Auto_Policy" finished-at="2013-10-24T09:45:07Z">
           <params>
             <param index="0">
               <value>
@@ -103,7 +103,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HouseholdMember -->
-        <test-method status="PASS" signature="Properties(boolean, int)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="Properties" duration-ms="1998" started-at="2013-10-09T14:27:55Z" depends-on-methods="kwi.zakir.PUP.Iteration01.HouseholdMember" finished-at="2013-10-09T14:27:57Z">
+        <test-method status="PASS" signature="Properties(boolean, int)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="Properties" duration-ms="9782" started-at="2013-10-24T09:45:07Z" depends-on-methods="kwi.zakir.PUP.Iteration01.HouseholdMember" finished-at="2013-10-24T09:45:17Z">
           <params>
             <param index="0">
               <value>
@@ -119,7 +119,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Properties -->
-        <test-method status="PASS" signature="NonCNIVehicle(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="NonCNIVehicle" duration-ms="424" started-at="2013-10-09T14:27:57Z" depends-on-methods="kwi.zakir.PUP.Iteration01.Properties" finished-at="2013-10-09T14:27:57Z">
+        <test-method status="PASS" signature="NonCNIVehicle(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="NonCNIVehicle" duration-ms="1760" started-at="2013-10-24T09:45:17Z" depends-on-methods="kwi.zakir.PUP.Iteration01.Properties" finished-at="2013-10-24T09:45:18Z">
           <params>
             <param index="0">
               <value>
@@ -130,7 +130,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NonCNIVehicle -->
-        <test-method status="PASS" signature="Watercraft(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="Watercraft" duration-ms="328" started-at="2013-10-09T14:27:57Z" depends-on-methods="kwi.zakir.PUP.Iteration01.NonCNIVehicle" finished-at="2013-10-09T14:27:57Z">
+        <test-method status="PASS" signature="Watercraft(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="Watercraft" duration-ms="1593" started-at="2013-10-24T09:45:18Z" depends-on-methods="kwi.zakir.PUP.Iteration01.NonCNIVehicle" finished-at="2013-10-24T09:45:20Z">
           <params>
             <param index="0">
               <value>
@@ -141,7 +141,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Watercraft -->
-        <test-method status="PASS" signature="RecreationalVehicle(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="RecreationalVehicle" duration-ms="369" started-at="2013-10-09T14:27:57Z" depends-on-methods="kwi.zakir.PUP.Iteration01.Watercraft" finished-at="2013-10-09T14:27:58Z">
+        <test-method status="PASS" signature="RecreationalVehicle(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="RecreationalVehicle" duration-ms="1497" started-at="2013-10-24T09:45:20Z" depends-on-methods="kwi.zakir.PUP.Iteration01.Watercraft" finished-at="2013-10-24T09:45:21Z">
           <params>
             <param index="0">
               <value>
@@ -152,7 +152,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RecreationalVehicle -->
-        <test-method status="PASS" signature="CoveragePremium(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="CoveragePremium" duration-ms="3647" started-at="2013-10-09T14:27:58Z" depends-on-methods="kwi.zakir.PUP.Iteration01.RecreationalVehicle" finished-at="2013-10-09T14:28:01Z">
+        <test-method status="PASS" signature="CoveragePremium(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="CoveragePremium" duration-ms="7077" started-at="2013-10-24T09:45:21Z" depends-on-methods="kwi.zakir.PUP.Iteration01.RecreationalVehicle" finished-at="2013-10-24T09:45:28Z">
           <params>
             <param index="0">
               <value>
@@ -163,7 +163,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CoveragePremium -->
-        <test-method status="PASS" signature="NameInsured(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="NameInsured" duration-ms="8812" started-at="2013-10-09T14:28:01Z" depends-on-methods="kwi.zakir.PUP.Iteration01.CoveragePremium" finished-at="2013-10-09T14:28:10Z">
+        <test-method status="PASS" signature="NameInsured(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="NameInsured" duration-ms="3239" started-at="2013-10-24T09:45:28Z" depends-on-methods="kwi.zakir.PUP.Iteration01.CoveragePremium" finished-at="2013-10-24T09:45:32Z">
           <params>
             <param index="0">
               <value>
@@ -174,7 +174,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NameInsured -->
-        <test-method status="PASS" signature="PaymentMethod(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="PaymentMethod" duration-ms="37038" started-at="2013-10-09T14:28:10Z" depends-on-methods="kwi.zakir.PUP.Iteration01.NameInsured" finished-at="2013-10-09T14:28:47Z">
+        <test-method status="PASS" signature="PaymentMethod(boolean)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="PaymentMethod" duration-ms="16340" started-at="2013-10-24T09:45:32Z" depends-on-methods="kwi.zakir.PUP.Iteration01.NameInsured" finished-at="2013-10-24T09:45:48Z">
           <params>
             <param index="0">
               <value>
@@ -185,7 +185,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PaymentMethod -->
-        <test-method status="PASS" signature="cleanup(java.lang.String)[pri:0, instance:kwi.zakir.PUP.Iteration01@4e88151c]" name="cleanup" is-config="true" duration-ms="3006" started-at="2013-10-09T14:28:47Z" finished-at="2013-10-09T14:28:50Z">
+        <test-method status="PASS" signature="cleanup(java.lang.String)[pri:0, instance:kwi.zakir.PUP.Iteration01@6de40a47]" name="cleanup" is-config="true" duration-ms="3004" started-at="2013-10-24T09:45:48Z" finished-at="2013-10-24T09:45:51Z">
           <params>
             <param index="0">
               <value>

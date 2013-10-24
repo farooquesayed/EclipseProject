@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 import kwi.zakir.Common.CommonLibrary;
 
 import org.json.simple.JSONArray;
@@ -14,42 +13,50 @@ import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class NewQuote  extends CommonLibrary{
 
 	public JSONParser parser = new JSONParser();
 	public static JSONObject pupJSON;
 	private WebDriver DRIVER; 
-
+	
 	public void Non_CNI_Vehicle() {
 		System.out.println("Entering Non CNI Vehicle");
-		
-		DoClicki("ContinueLink");
+		waitPage("AddVehicle");
+		WaitProperty_Click("ContinueLink");
 	}
 	
 	public void Watercraft() {
 		System.out.println("Entering Watercraft");
-		
-		DoClicki("ContinueLink");
+		waitPage("AddWatercraft");
+		WaitProperty_Click("ContinueLink");
 	}
 	
 	public void Recreational_Vehicle() {
 		System.out.println("Entering recreational Vehicle");
-		
-		DoClicki("ContinueLink");
+		waitPage("AddRecVehicle");
+		WaitProperty_Click("ContinueLink");
 	}
 	
 	public void Coverage_Premium() {
 		System.out.println("Entering Coverage Premium");
+		waitPage("CPPrint");
+		
 		DoClicki("qpbb2_SelectPolicy");
-		DoClicki("ContinueLink");
+		WaitProperty_Click("ContinueLink");
 	}
 	
 	public void Name_Insured_Trustee() {
 		System.out.println("Entering Name Insured & Trustee");
+		waitPage("InsuredTypeID");
+		
 		DoSelecti("InsuredTypeID", Integer.parseInt(getJSONvalue("InsuredTypeId")));
 		DoClicki("MailingAddressSameAsPrimary");
 
@@ -58,6 +65,8 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void Payment_Method() {
 		System.out.println("Entering Payment Method");
+		waitPage("PaymentTypeId");
+		
 		DoSelecti("PaymentTypeId", Integer.parseInt(getJSONvalue("paymentTypeId")));
 		DoSelecti("CardTypeId", Integer.parseInt(getJSONvalue("cardTypeId")));
 		DoKeyi("CardNumber", getJSONvalue("CardNumber"));
@@ -70,11 +79,12 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void Properties(int dateValue) {
 		System.out.println("Entering Property information");
-		
+		waitPage("Property_YearBuilt");
 		DoKeyi("Property_YearBuilt", getJSONvalue("propYearBuilt"));
 		insurance_information(dateValue);
-		
 		DoClicki("NoLink");
+		
+		waitPage("AddProperty");
 		WaitProperty_Click("ContinueLink");
 	}
 	
@@ -90,15 +100,17 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void Household_Member() {
 		System.out.println("Entering household member");
-		
+		waitPage("HouseholdMember_DOB");
 		DoKeyi("HouseholdMember_DOB", getJSONvalue("hhmDOB"));
-		
 		DoClicki("NoLink");
+
+		waitPage("AddHouseholdMember");
 		DoClicki("ContinueLink");
 	}
 	
 	public void CNI_Auto_Policy(int dateValue) {
 		System.out.println("Entering CNI auto policy information");
+		waitPage("NumberOfVehicles");
 		DoClicki("NumberOfVehicles");
 		DoKeyi("NumberOfVehicles", getJSONvalue("NoOfCNIVeh"));
 		
@@ -114,6 +126,7 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void enter_no_GAQ() {
 		System.out.println("Answering NO to all questions.");
+		waitPage("QuestionHeader");
 		for (int i=0; i<=14; i++) {
 			DRIVER.findElement(By.xpath("//input[@id='Questions_" + i + "__Answer' and @value='FALSE']")).click();
 		}
@@ -123,20 +136,24 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void Insurance_Product(int dateValue) {
 		System.out.println("Selecting Product line = PUP");
-		DoKeyi("EffectiveDate", CustomDate(dateValue, true) + Keys.TAB);
+		waitPage("EffectiveDate");
+		DoKeyi("EffectiveDate", CustomDate(dateValue, false) + Keys.TAB);
 		
 		if(dateValue<=0) {
 			addDelay(3000);
+			DoClicki("Continue");
 		}
-		DoClicki("Continue");
+		else
+			DoClicki("ContinueLink");
 	}
 	
 	
 	public void Customer_Information() {
 		System.out.println("Entering Customer Information");
-		DoKeyi("FirstName", getJSONvalue("fName"));
-		DoKeyi("MiddleName", getJSONvalue("mName"));
+		waitPage("FirstName");
 		DoKeyi("LastName", getJSONvalue("lName"));
+		DoKeyi("MiddleName", getJSONvalue("mName"));
+		DoKeyi("FirstName", getJSONvalue("fName"));
 		
 		DoSelecti("PrimaryPhone_PhoneTypeId", Integer.parseInt(getJSONvalue("phnType")));
 		DoKeyi("EMail", getJSONvalue("EMail"));
@@ -154,12 +171,14 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void GetQuote() {
 		System.out.println("Starting Quote");
+		waitPage("btnGetQuote");
 		DoClicki("btnGetQuote");
 	}
 
 	
 	public void SelectAgency() {
 		System.out.println("Selecting Agency");
+		waitPage("AgencyBranch");
 		DoSelectn("AgencyBranch", Integer.parseInt(getJSONvalue("AgencyBranchId")));
 		DoClicki("ContinueLink");
 	}
@@ -171,6 +190,21 @@ public class NewQuote  extends CommonLibrary{
 		
 	}
 	
+    public ExpectedCondition<WebElement> visibilityOfElementLocated(final By by) {
+        return new ExpectedCondition<WebElement>() {
+          public WebElement apply(WebDriver driver) {
+            WebElement element = driver.findElement(by);
+            return element.isDisplayed() ? element : null;
+          }
+        };
+      }
+      
+      public void waitPage(String objID) {
+    	  System.out.println("Waiting for ID: " + objID);
+    	  Wait<WebDriver> wait = new WebDriverWait(DRIVER, 20);
+    	  wait.until(visibilityOfElementLocated(By.id(objID)));
+      }
+    
 	
 	public void setBrowserdriver(String browserDriver) {
 		
@@ -195,8 +229,7 @@ public class NewQuote  extends CommonLibrary{
 		}
 
 		CommonLibrary.init_Driver(DRIVER);
-		DRIVER.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+		//DRIVER.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 	public void setJSONobj() {
