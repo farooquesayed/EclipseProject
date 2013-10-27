@@ -21,8 +21,8 @@ public class Iteration01 {
 	
 	@Test
 	@Parameters ({"Browser", "baseURL"})
-	public void Login(@Optional("IE") String Browser, @Optional("http://pasqa/pup") String baseURL) {
-		System.out.println("Login to PAS");
+	public void Login(@Optional("CR") String Browser, @Optional("http://pasqa/pup") String baseURL) {
+		System.out.println("Login");
 
 		objPage.setBrowserdriver(Browser);
 		objPage.devLogin(baseURL);
@@ -151,6 +151,7 @@ public class Iteration01 {
 		}
 	}
 
+	
 	
 	@AfterTest
 	@Parameters ({"Browser"})
