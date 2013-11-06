@@ -14,12 +14,12 @@
           <include name="Login"/>
           <include name="InsuranceProduct"/>
           <include name="NonCNIVehicle"/>
-          <include name="CustomerInformation"/>
+          <include name="CustomerInformation" invocation-numbers="0"/>
           <include name="Properties"/>
           <include name="initialization"/>
           <include name="PaymentMethod"/>
           <include name="CNI_Auto_Policy"/>
-          <include name="NameInsured" invocation-numbers="0"/>
+          <include name="NameInsured"/>
           <include name="Watercraft"/>
         </methods>
       </class> <!-- kwi.zakir.PUP.Iteration01 -->

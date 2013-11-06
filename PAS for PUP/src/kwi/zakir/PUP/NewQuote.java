@@ -50,7 +50,7 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void Name_Insured_Trustee() {
 		System.out.println("Entering Name Insured & Trustee");
-		DoSelecti("InsuredTypeID", Integer.parseInt(getJSONvalue("InsuredTypeId")));
+		DoSelecti("InsuredTypeID", getJSONvalue("InsuredTypeId"));
 		DoClicki("MailingAddressSameAsPrimary");
 
 		DoClicki("ContinueLink");
@@ -58,12 +58,12 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void Payment_Method() {
 		System.out.println("Entering Payment Method");
-		DoSelecti("PaymentTypeId", Integer.parseInt(getJSONvalue("paymentTypeId")));
-		DoSelecti("CardTypeId", Integer.parseInt(getJSONvalue("cardTypeId")));
+		DoSelecti("PaymentTypeId", getJSONvalue("paymentTypeId"));
+		DoSelecti("CardTypeId", getJSONvalue("cardTypeId"));
 		DoKeyi("CardNumber", getJSONvalue("CardNumber"));
 		DoKeyi("SecurityCode", getJSONvalue("SecurityCode"));
-		DoSelecti("Month", Integer.parseInt(getJSONvalue("Month")));
-		DoSelecti("Year", Integer.parseInt(getJSONvalue("Year")));
+		DoSelecti("Month", getJSONvalue("Month"));
+		DoSelecti("Year", getJSONvalue("Year"));
 
 		DoClicki("ContinueLink");
 	}
@@ -79,10 +79,10 @@ public class NewQuote  extends CommonLibrary{
 	}
 	
 	public void insurance_information(int dateValue) {
-		DoSelecti("UnderlyingInsurance_LimitTypeId", Integer.parseInt(getJSONvalue("InsLimitTypeId")));
+		DoSelecti("UnderlyingInsurance_LimitTypeId", getJSONvalue("InsLimitTypeId"));
 		DoKeyi("UnderlyingInsurance_EffectiveDate", CustomDate(dateValue-7, false));
 		DoKeyi("UnderlyingInsurance_Limit", getJSONvalue("insCLimit"));
-		DoSelecti("UnderlyingInsurance_InsuranceCarrierId", Integer.parseInt(getJSONvalue("InsCarrierId")));
+		DoSelecti("UnderlyingInsurance_InsuranceCarrierId", getJSONvalue("InsCarrierId"));
 	//	DoClicki("UnderlyingInsurance_ExpirationDate");
 		DoKeyi("UnderlyingInsurance_PolicyNumber", getJSONvalue("propPolicy"));
 				
@@ -138,13 +138,13 @@ public class NewQuote  extends CommonLibrary{
 		DoKeyi("MiddleName", getJSONvalue("mName"));
 		DoKeyi("LastName", getJSONvalue("lName"));
 		
-		DoSelecti("PrimaryPhone_PhoneTypeId", Integer.parseInt(getJSONvalue("phnType")));
+		DoSelecti("PrimaryPhone_PhoneTypeId", getJSONvalue("phnType"));
 		DoKeyi("EMail", getJSONvalue("EMail"));
 		
 		DoKeyi("PrimaryAddress_StreetNumber", getJSONvalue("StreetNumber"));
-		DoSelecti("PrimaryAddress_StreetDirectionTypeId", Integer.parseInt(getJSONvalue("StreetDirection")));
+		DoSelecti("PrimaryAddress_StreetDirectionTypeId", getJSONvalue("StreetDirection"));
 		DoKeyi("PrimaryAddress_StreetName", getJSONvalue("StreetName"));
-		DoSelecti("PrimaryAddress_StreetTypeId", Integer.parseInt(getJSONvalue("StreetType")));
+		DoSelecti("PrimaryAddress_StreetTypeId", getJSONvalue("StreetType"));
 		DoKeyi("PrimaryAddress_UnitNumber", getJSONvalue("UnitNumber"));
 		DoKeyi("PrimaryAddress_ZipCode", getJSONvalue("ZipCode"));
 		DoKeyi("PrimaryPhone_PhoneNumber", getJSONvalue("phnNumber"));
@@ -160,7 +160,7 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void SelectAgency() {
 		System.out.println("Selecting Agency");
-		DoSelectn("AgencyBranch", Integer.parseInt(getJSONvalue("AgencyBranchId")));
+		DoSelectn("AgencyBranch", Integer.parseInt((String) getJSONvalue("AgencyBranchId")));
 		DoClicki("ContinueLink");
 	}
 	
@@ -217,9 +217,9 @@ public class NewQuote  extends CommonLibrary{
 	}
 	
 	
-	public static String getJSONvalue(String id) {
-		String jsonData = pupJSON.get(id).toString();
-        System.out.println(jsonData);
+	public static Object getJSONvalue(String id) {
+		Object jsonData = pupJSON.get(id);
+        System.out.println(jsonData.toString());
         return jsonData;
 	}	
 	

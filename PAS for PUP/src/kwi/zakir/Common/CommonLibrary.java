@@ -65,10 +65,11 @@ public class CommonLibrary {
 	}
 
 	public void DoSelecti(String objID, Object obj) {
-		if(obj.toString().isEmpty() == false && obj instanceof Integer) 
-			new Select(commDRIVER.findElement(By.id(objID))).selectByIndex((int) obj);
-		else if(obj.toString().isEmpty() == false && obj instanceof String) 
-			new Select(commDRIVER.findElement(By.id(objID))).selectByValue((String) obj);
+//		if(obj.toString().isEmpty() == false && obj instanceof Integer) 
+//			new Select(commDRIVER.findElement(By.id(objID))).selectByIndex((int) obj);
+//		else if(obj.toString().isEmpty() == false && obj instanceof String) 
+//			new Select(commDRIVER.findElement(By.id(objID))).selectByValue((String) obj);
+		new Select(commDRIVER.findElement(By.id(objID))).selectByIndex(Integer.parseInt(obj.toString()));
 	}
 
 	public void DoKeyn(String objID, String val) {
