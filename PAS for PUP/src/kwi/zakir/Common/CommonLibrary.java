@@ -1,3 +1,5 @@
+
+
 package kwi.zakir.Common;
 
 
@@ -62,17 +64,20 @@ public class CommonLibrary {
 		new Select(commDRIVER.findElement(By.name(objID))).selectByIndex(i);
 	}
 
-	public void DoSelecti(String objID, int i) {
-		new Select(commDRIVER.findElement(By.id(objID))).selectByIndex(i);
+	public void DoSelecti(String objID, Object obj) {
+		if(obj.toString().isEmpty() == false && obj instanceof Integer) 
+			new Select(commDRIVER.findElement(By.id(objID))).selectByIndex((int) obj);
+		else if(obj.toString().isEmpty() == false && obj instanceof String) 
+			new Select(commDRIVER.findElement(By.id(objID))).selectByValue((String) obj);
 	}
 
 	public void DoKeyn(String objID, String val) {
 		commDRIVER.findElement(By.name(objID)).sendKeys(val);
 	}
 
-	public void DoKeyi(String objID, String val) {
+	public void DoKeyi(String objID, Object val) {
 		commDRIVER.findElement(By.id(objID)).clear();
-		commDRIVER.findElement(By.id(objID)).sendKeys(val);
+		commDRIVER.findElement(By.id(objID)).sendKeys(val.toString());
 	}
 
 	public static void init_Driver(WebDriver DRIVER) {
