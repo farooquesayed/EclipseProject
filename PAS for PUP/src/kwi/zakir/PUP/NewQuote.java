@@ -58,13 +58,27 @@ public class NewQuote  extends CommonLibrary{
 	
 	public void Payment_Method() {
 		System.out.println("Entering Payment Method");
-		DoSelecti("PaymentTypeId", getJSONvalue("paymentTypeId"));
-		DoSelecti("CardTypeId", getJSONvalue("cardTypeId"));
-		DoKeyi("CardNumber", getJSONvalue("CardNumber"));
-		DoKeyi("SecurityCode", getJSONvalue("SecurityCode"));
-		DoSelecti("Month", getJSONvalue("Month"));
-		DoSelecti("Year", getJSONvalue("Year"));
-
+		PaymentMethods pupPayType = new PaymentMethods();
+		String p=getJSONvalue("paymentTypeId").toString();
+		
+		switch(p)
+		{
+		case "1":
+			pupPayType.CreditCard();
+			break;
+		case "2":
+			pupPayType.DebitCard();
+			break;
+		case "3":
+			pupPayType.PersonalEcheck();
+			break;
+		case "4":
+			pupPayType.paperCheck();
+			break;
+		default:
+			System.out.println("Invalid payment type selected: " + p);
+		}	
+		
 		DoClicki("ContinueLink");
 	}
 	
@@ -127,8 +141,10 @@ public class NewQuote  extends CommonLibrary{
 		
 		if(dateValue<=0) {
 			addDelay(3000);
+			DoClicki("Continue");
 		}
-		DoClicki("Continue");
+		else
+			DoClicki("ContinueLink");
 	}
 	
 	

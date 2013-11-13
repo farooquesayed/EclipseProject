@@ -8,7 +8,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class Main {
+public class MainTestProject {
      public static void main(String[] args) {
 
     	Class3 zak = new Class3();

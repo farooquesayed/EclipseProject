@@ -9,7 +9,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class Iteration01 {
+public class Main {
 	
 	private NewQuote objPage = new NewQuote();
 	
@@ -25,8 +25,7 @@ public class Iteration01 {
 		System.out.println("Login");
 
 		objPage.setBrowserdriver(Browser);
-		objPage.devLogin(baseURL);
-		
+		objPage.devLogin(baseURL);		
 	}
 
 	@Test(dependsOnMethods = { "Login" })
@@ -53,7 +52,7 @@ public class Iteration01 {
 
 	@Test(dependsOnMethods = { "CustomerInformation" })
 	@Parameters ({"isInsProd", "EffDate"})
-	public void InsuranceProduct(@Optional("true") boolean isTrue, @Optional("-7") int dateValue) {
+	public void InsuranceProduct(@Optional("true") boolean isTrue, @Optional("7") int dateValue) {
 		System.out.println("InsuranceProduct");
 		if(isTrue) {
 			objPage.Insurance_Product(dateValue);

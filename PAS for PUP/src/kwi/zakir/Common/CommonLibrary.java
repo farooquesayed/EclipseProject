@@ -69,7 +69,8 @@ public class CommonLibrary {
 //			new Select(commDRIVER.findElement(By.id(objID))).selectByIndex((int) obj);
 //		else if(obj.toString().isEmpty() == false && obj instanceof String) 
 //			new Select(commDRIVER.findElement(By.id(objID))).selectByValue((String) obj);
-		new Select(commDRIVER.findElement(By.id(objID))).selectByIndex(Integer.parseInt(obj.toString()));
+		if(obj.toString().isEmpty() == false) 
+			new Select(commDRIVER.findElement(By.id(objID))).selectByIndex(Integer.parseInt(obj.toString()));
 	}
 
 	public void DoKeyn(String objID, String val) {

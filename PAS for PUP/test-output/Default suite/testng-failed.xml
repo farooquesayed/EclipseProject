@@ -3,26 +3,26 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="kwi.zakir.PUP.Iteration01">
+      <class name="kwi.zakir.PUP.Main">
         <methods>
-          <include name="GeneralAcceptabilityQuestions"/>
+          <include name="CustomerInformation"/>
+          <include name="Properties"/>
+          <include name="NonCNIVehicle"/>
+          <include name="PaymentMethod" invocation-numbers="0"/>
+          <include name="CoveragePremium"/>
+          <include name="NameInsured"/>
           <include name="StartQuote_WithAgency"/>
           <include name="HouseholdMember"/>
-          <include name="cleanup"/>
-          <include name="CoveragePremium"/>
-          <include name="RecreationalVehicle"/>
-          <include name="Login"/>
           <include name="InsuranceProduct"/>
-          <include name="NonCNIVehicle"/>
-          <include name="CustomerInformation" invocation-numbers="0"/>
-          <include name="Properties"/>
+          <include name="GeneralAcceptabilityQuestions"/>
+          <include name="Login"/>
+          <include name="RecreationalVehicle"/>
           <include name="initialization"/>
-          <include name="PaymentMethod"/>
+          <include name="cleanup"/>
           <include name="CNI_Auto_Policy"/>
-          <include name="NameInsured"/>
           <include name="Watercraft"/>
         </methods>
-      </class> <!-- kwi.zakir.PUP.Iteration01 -->
+      </class> <!-- kwi.zakir.PUP.Main -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
