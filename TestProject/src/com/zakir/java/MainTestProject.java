@@ -12,9 +12,9 @@ public class MainTestProject {
      public static void main(String[] args) {
 
     	Class3 zak = new Class3();
-    	zak.setJSONobj();
-    	zak.getJSONvalue("fName");
-    	zak.getJSONvalue("mName");
-    	zak.getJSONvalue("Year");
+    	zak.setJSONobj("Property");
+    	zak.getJSONvalue("Primary");
+//    	zak.getJSONvalue("mName");
+//    	zak.getJSONvalue("StreetNumber");
      }
 }

@@ -21,7 +21,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class NewQuote  extends CommonLibrary{
 
 	public JSONParser parser = new JSONParser();
-	public static JSONObject pupJSON;
+	public String jsonFileName;
+	public static JSONObject pupJSON, a;
 	private WebDriver DRIVER; 
 
 	public void Non_CNI_Vehicle() {
@@ -215,10 +216,10 @@ public class NewQuote  extends CommonLibrary{
 
 	}
 
-	public void setJSONobj() {
+	public void setJSONobj_old(String jsonFileName) {
         JSONArray a;
 		try {
-			a = (JSONArray) parser.parse(new FileReader("./bin/PAS_PUP.json"));
+			a = (JSONArray) parser.parse(new FileReader("./bin/" + jsonFileName));
 	        pupJSON = (JSONObject) a.get(0);
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found" + e.getMessage());
@@ -232,10 +233,30 @@ public class NewQuote  extends CommonLibrary{
 		};
 	}
 	
+	public void setjsonFileName(String filename) {
+		this.jsonFileName = filename;
+	}
+	
+	public void setJSONobj(Object key) {
+		
+		try {
+			a = (JSONObject) parser.parse(new FileReader("./bin/" + this.jsonFileName));
+	        pupJSON = (JSONObject) a.get(key);
+		} catch (FileNotFoundException e) {
+			System.out.println("File not found" + e.getMessage());
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		};
+	}
 	
 	public static Object getJSONvalue(String id) {
 		Object jsonData = pupJSON.get(id);
-        System.out.println(jsonData.toString());
+        System.out.println("JSON VALUE: " + jsonData.toString());
         return jsonData;
 	}	
 	

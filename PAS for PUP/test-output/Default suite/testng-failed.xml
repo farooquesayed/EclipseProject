@@ -3,26 +3,26 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="kwi.zakir.PUP.Main">
+      <class name="kwi.zakir.PUP.Main_SmokeTest">
         <methods>
-          <include name="CustomerInformation"/>
+          <include name="GeneralAcceptabilityQuestions"/>
+          <include name="RecreationalVehicle"/>
+          <include name="NameInsured"/>
+          <include name="Login"/>
+          <include name="InsuranceProduct"/>
+          <include name="HouseholdMember"/>
+          <include name="initialization"/>
           <include name="Properties"/>
           <include name="NonCNIVehicle"/>
-          <include name="PaymentMethod" invocation-numbers="0"/>
-          <include name="CoveragePremium"/>
-          <include name="NameInsured"/>
-          <include name="StartQuote_WithAgency"/>
-          <include name="HouseholdMember"/>
-          <include name="InsuranceProduct"/>
-          <include name="GeneralAcceptabilityQuestions"/>
-          <include name="Login"/>
-          <include name="RecreationalVehicle"/>
-          <include name="initialization"/>
+          <include name="StartQuote_WithAgency" invocation-numbers="0"/>
+          <include name="Watercraft"/>
+          <include name="CustomerInformation"/>
           <include name="cleanup"/>
           <include name="CNI_Auto_Policy"/>
-          <include name="Watercraft"/>
+          <include name="CoveragePremium"/>
+          <include name="PaymentMethod"/>
         </methods>
-      </class> <!-- kwi.zakir.PUP.Main -->
+      </class> <!-- kwi.zakir.PUP.Main_SmokeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

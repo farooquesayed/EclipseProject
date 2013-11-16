@@ -16,7 +16,7 @@ public class Main {
 	@BeforeTest
 	public void initialization() {
 		System.out.println("initialization");
-		objPage.setJSONobj();
+		objPage.setJSONobj("PAS_PUP_SmokeTest");
 	}
 	
 	@Test

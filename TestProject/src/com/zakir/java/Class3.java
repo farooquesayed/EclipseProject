@@ -5,6 +5,7 @@ package com.zakir.java;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Set;
 
 import org.json.simple.JSONArray;
@@ -21,13 +22,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Class3 {
 
 	public JSONParser parser = new JSONParser();
-	public JSONObject pupJSON;
+	public JSONObject a, pupJSON;
 	
-	public void setJSONobj() {
-        JSONArray a;
+	public void setJSONobj(Object key) {
+		
 		try {
-			a = (JSONArray) parser.parse(new FileReader("./PAS_PUP.json"));
-	        pupJSON = (JSONObject) a.get(0);
+			a = (JSONObject) parser.parse(new FileReader("C:\\test.json"));
+	        pupJSON = (JSONObject) a.get(key);
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found" + e.getMessage());
 			e.printStackTrace();
@@ -41,10 +42,22 @@ public class Class3 {
 	}
 	
 	
-	public String getJSONvalue(String id) {
+	public String oldgetJSONvalue(String id) {
 		String jsonData = pupJSON.get(id).toString();
         System.out.println(jsonData);
         return jsonData;
+	}
+	
+	public String jetJSONvalue(String id) {
+	      JSONObject jObject = pupJSON;
+	        Iterator<?> keys = jObject.keySet();
+
+	        while( keys.hasNext() ){
+	            String key = (String)keys.next();
+	            if( jObject.get(key) instanceof JSONObject ){
+
+	            }
+	        }		
 	}
 
 
