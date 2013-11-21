@@ -1,32 +1,7 @@
 {
-    "Agency Selection": {
-        "AgencyBranchId": "6"
-    },
     "Customer Information": {
         "fName": "zakir1",
-        "mName": "V1",
-        "lName": "sayed1",
-        "phnType": "1",
-        "phnNumber": "323-472-9999",
-        "EMail": "zakirsayed@cnico.com",
-        "StreetNumber": "12200",
-        "StreetDirection": "2",
-        "StreetName": "Sylvan",
-        "StreetType": "2",
-        "UnitNumber": "444",
-        "ZipCode": "91205",
-        "ZipExt": "2222"
-    },
-    "Insurance Product": {
-        "InsuredTypeId": 1
-    },
-    "GAQ": {},
-    "CNI Auto Policy": {
-        "NoOfCNIVeh": 2,
-        "insSplitLimit1": 250,
-        "insSplitLimit2": 500,
-        "insSplitLimit3": 100,
-        "PAPolicyNumber": "PPA1234567"
+        "mName": "V1"
     },
     "Household Member": [
         {
@@ -39,49 +14,17 @@
         }
     ],
     "Property": {
-        "Primary": [
+        "Primary": 
             {
                 "propYearBuilt": "2010"
             }
-        ],
-        "Secondary": [
+        ,
+        "Secondary": 
             {"propYearBuilt": "2010"},
-            {"propYearBuilt": "1987"}
-        ],
-        "Rental": [
+
+        "Rental": 
             {
                 "propYearBuilt": "2010"
             }
-        ]
-    },
-    "Insurance Information": {
-        "InsCarrierId": "3",
-        "InsLimitTypeId": 1,
-        "insCLimit": "555",
-        "propPolicy": "POL123456"
-    },
-    "Non CNI Vehicle": {
-        "Count": 1
-    },
-    "Watercraft": {
-        "Count": 0
-    },
-    "Recreational Vehicle": {
-        "Count": 0
-    },
-    "Coverage & Premium": {},
-    "Name Insured": {},
-    "Trustee": {},
-    "Payment Information": {
-        "paymentTypeId": "4",
-        "cardTypeId": "1",
-        "CardNumber": "4111111111111111",
-        "SecurityCode": "111",
-        "Month": "2",
-        "Year": 2,
-        "CheckNumber": "123456",
-        "ABANumber": "1220665",
-        "AccountNumber": "44444444"
-    },
-    "Policy Confirmation": {}
+    }
 }

@@ -14,13 +14,13 @@
           <include name="initialization"/>
           <include name="Properties"/>
           <include name="NonCNIVehicle"/>
-          <include name="StartQuote_WithAgency" invocation-numbers="0"/>
+          <include name="StartQuote_WithAgency"/>
           <include name="Watercraft"/>
           <include name="CustomerInformation"/>
           <include name="cleanup"/>
           <include name="CNI_Auto_Policy"/>
           <include name="CoveragePremium"/>
-          <include name="PaymentMethod"/>
+          <include name="PaymentMethod" invocation-numbers="0"/>
         </methods>
       </class> <!-- kwi.zakir.PUP.Main_SmokeTest -->
     </classes>

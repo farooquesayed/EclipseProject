@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/12</td>
+<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Nov 13 17:37:07 PST 2013</td>
+<td>Started on:</td><td>Wed Nov 20 15:57:12 PST 2013</td>
 </tr>
-<tr><td>Total time:</td><td>52 seconds (52247 ms)</td>
+<tr><td>Total time:</td><td>74 seconds (74914 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,31 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='kwi.zakir.PUP.Main_SmokeTest.StartQuote_WithAgency()'><b>StartQuote_WithAgency</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=30.0.1599.101)
-  (Driver info: chromedriver=2.3,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.67 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.37.0&apos;, revision: &apos;a7c61cb&apos;, time: &apos;2013-10-18 17:14:00&apos;
-System info: host: &apos;ISDEVQA2&apos;, ip: &apos;172.16.94.61&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_21&apos;
-Session ID: 55da56a96ce57ab98ac4d0d3b70ad624
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={chromedriverVersion=2.3}, rotatable=false, locationContextEnabled=true, version=30.0.1599.101, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:348)
-	at org.openqa.selenium.By$ById.findElement(By.java:220)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at kwi.zakir.Common.CommonLibrary.DoClicki(CommonLibrary.java:60)
-	at kwi.zakir.PUP.NewQuote.GetQuote(NewQuote.java:174)
-	at kwi.zakir.PUP.Main_SmokeTest.StartQuote_WithAgency(Main_SmokeTest.java:37)
+<td title='kwi.zakir.PUP.Main_SmokeTest.PaymentMethod()'><b>PaymentMethod</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true</td>
+<td><div><pre>java.lang.NullPointerException
+	at kwi.zakir.PUP.NewQuote.getJSONvalue(NewQuote.java:258)
+	at kwi.zakir.PUP.PaymentMethods.paperCheck(PaymentMethods.java:34)
+	at kwi.zakir.PUP.NewQuote.Payment_Method(NewQuote.java:77)
+	at kwi.zakir.PUP.Main_SmokeTest.PaymentMethod(Main_SmokeTest.java:150)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -124,31 +105,12 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browser
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace607479057", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace607479057'><pre>org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=30.0.1599.101)
-  (Driver info: chromedriver=2.3,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.67 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.37.0&apos;, revision: &apos;a7c61cb&apos;, time: &apos;2013-10-18 17:14:00&apos;
-System info: host: &apos;ISDEVQA2&apos;, ip: &apos;172.16.94.61&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_21&apos;
-Session ID: 55da56a96ce57ab98ac4d0d3b70ad624
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={chromedriverVersion=2.3}, rotatable=false, locationContextEnabled=true, version=30.0.1599.101, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:348)
-	at org.openqa.selenium.By$ById.findElement(By.java:220)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at kwi.zakir.Common.CommonLibrary.DoClicki(CommonLibrary.java:60)
-	at kwi.zakir.PUP.NewQuote.GetQuote(NewQuote.java:174)
-	at kwi.zakir.PUP.Main_SmokeTest.StartQuote_WithAgency(Main_SmokeTest.java:37)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1576523211", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1576523211'><pre>java.lang.NullPointerException
+	at kwi.zakir.PUP.NewQuote.getJSONvalue(NewQuote.java:258)
+	at kwi.zakir.PUP.PaymentMethods.paperCheck(PaymentMethods.java:34)
+	at kwi.zakir.PUP.NewQuote.Payment_Method(NewQuote.java:77)
+	at kwi.zakir.PUP.Main_SmokeTest.PaymentMethod(Main_SmokeTest.java:150)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -174,8 +136,8 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browser
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
-<td>20</td>
-<td>kwi.zakir.PUP.Main_SmokeTest@37db1db7</td></tr>
+<td>0</td>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -185,78 +147,70 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browser
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='kwi.zakir.PUP.Main_SmokeTest.CNI_Auto_Policy()'><b>CNI_Auto_Policy</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true, -7</td>
+<td></td>
+<td>8</td>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
+<tr>
+<td title='kwi.zakir.PUP.Main_SmokeTest.CoveragePremium()'><b>CoveragePremium</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true</td>
+<td></td>
+<td>4</td>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
+<tr>
+<td title='kwi.zakir.PUP.Main_SmokeTest.CustomerInformation()'><b>CustomerInformation</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true</td>
+<td></td>
+<td>12</td>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
+<tr>
+<td title='kwi.zakir.PUP.Main_SmokeTest.GeneralAcceptabilityQuestions()'><b>GeneralAcceptabilityQuestions</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true</td>
+<td></td>
+<td>2</td>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
+<tr>
+<td title='kwi.zakir.PUP.Main_SmokeTest.HouseholdMember()'><b>HouseholdMember</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true</td>
+<td></td>
+<td>2</td>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
+<tr>
+<td title='kwi.zakir.PUP.Main_SmokeTest.InsuranceProduct()'><b>InsuranceProduct</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true, 7</td>
+<td></td>
+<td>1</td>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
+<tr>
 <td title='kwi.zakir.PUP.Main_SmokeTest.Login()'><b>Login</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: CR, http://pasqa/pup</td>
 <td></td>
-<td>28</td>
-<td>kwi.zakir.PUP.Main_SmokeTest@37db1db7</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>5</td>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
 <tr>
-<td title='kwi.zakir.PUP.Main_SmokeTest.CNI_Auto_Policy()'><b>CNI_Auto_Policy</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest</td>
+<td title='kwi.zakir.PUP.Main_SmokeTest.NameInsured()'><b>NameInsured</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true</td>
+<td></td>
+<td>1</td>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
+<tr>
+<td title='kwi.zakir.PUP.Main_SmokeTest.NonCNIVehicle()'><b>NonCNIVehicle</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true</td>
 <td></td>
 <td>0</td>
-<td>null</td></tr>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
 <tr>
-<td title='kwi.zakir.PUP.Main_SmokeTest.CoveragePremium()'><b>CoveragePremium</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest</td>
+<td title='kwi.zakir.PUP.Main_SmokeTest.Properties()'><b>Properties</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true, -7</td>
+<td></td>
+<td>2</td>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
+<tr>
+<td title='kwi.zakir.PUP.Main_SmokeTest.RecreationalVehicle()'><b>RecreationalVehicle</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true</td>
 <td></td>
 <td>0</td>
-<td>null</td></tr>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
 <tr>
-<td title='kwi.zakir.PUP.Main_SmokeTest.CustomerInformation()'><b>CustomerInformation</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest</td>
+<td title='kwi.zakir.PUP.Main_SmokeTest.StartQuote_WithAgency()'><b>StartQuote_WithAgency</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true</td>
+<td></td>
+<td>7</td>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
+<tr>
+<td title='kwi.zakir.PUP.Main_SmokeTest.Watercraft()'><b>Watercraft</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest<br>Parameters: true</td>
 <td></td>
 <td>0</td>
-<td>null</td></tr>
-<tr>
-<td title='kwi.zakir.PUP.Main_SmokeTest.GeneralAcceptabilityQuestions()'><b>GeneralAcceptabilityQuestions</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest</td>
-<td></td>
-<td>0</td>
-<td>null</td></tr>
-<tr>
-<td title='kwi.zakir.PUP.Main_SmokeTest.HouseholdMember()'><b>HouseholdMember</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest</td>
-<td></td>
-<td>0</td>
-<td>null</td></tr>
-<tr>
-<td title='kwi.zakir.PUP.Main_SmokeTest.InsuranceProduct()'><b>InsuranceProduct</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest</td>
-<td></td>
-<td>0</td>
-<td>null</td></tr>
-<tr>
-<td title='kwi.zakir.PUP.Main_SmokeTest.NameInsured()'><b>NameInsured</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest</td>
-<td></td>
-<td>0</td>
-<td>null</td></tr>
-<tr>
-<td title='kwi.zakir.PUP.Main_SmokeTest.NonCNIVehicle()'><b>NonCNIVehicle</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest</td>
-<td></td>
-<td>0</td>
-<td>null</td></tr>
-<tr>
-<td title='kwi.zakir.PUP.Main_SmokeTest.PaymentMethod()'><b>PaymentMethod</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest</td>
-<td></td>
-<td>0</td>
-<td>null</td></tr>
-<tr>
-<td title='kwi.zakir.PUP.Main_SmokeTest.Properties()'><b>Properties</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest</td>
-<td></td>
-<td>0</td>
-<td>null</td></tr>
-<tr>
-<td title='kwi.zakir.PUP.Main_SmokeTest.RecreationalVehicle()'><b>RecreationalVehicle</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest</td>
-<td></td>
-<td>0</td>
-<td>null</td></tr>
-<tr>
-<td title='kwi.zakir.PUP.Main_SmokeTest.Watercraft()'><b>Watercraft</b><br>Test class: kwi.zakir.PUP.Main_SmokeTest</td>
-<td></td>
-<td>0</td>
-<td>null</td></tr>
+<td>kwi.zakir.PUP.Main_SmokeTest@69960a51</td></tr>
 </table><p>
 </body>
 </html>

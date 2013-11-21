@@ -16,7 +16,7 @@ public class Main_SmokeTest {
 	@BeforeTest
 	public void initialization() {
 		System.out.println("initialization");
-		objPage.setjsonFileName("PAS_PUP_SmokeTest");
+		objPage.setjsonFileName("PAS_PUP_SmokeTest.json");
 		objPage.setJSONobj("FullQuote");
 	}
 	

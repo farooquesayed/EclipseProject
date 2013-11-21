@@ -34,7 +34,7 @@ public class Class3 {
 	}
 	
 	
-	public String oldgetJSONvalue(String id, int index) {
+	public String getJSONvalue(String id, int index) {
 		
 		
 		String jsonData = "";

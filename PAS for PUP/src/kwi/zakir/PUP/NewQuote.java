@@ -22,7 +22,7 @@ public class NewQuote  extends CommonLibrary{
 
 	public JSONParser parser = new JSONParser();
 	public String jsonFileName;
-	public static JSONObject pupJSON, a;
+	public JSONObject pupJSON, a;
 	private WebDriver DRIVER; 
 
 	public void Non_CNI_Vehicle() {
@@ -107,7 +107,7 @@ public class NewQuote  extends CommonLibrary{
 		System.out.println("Entering household member");
 		
 		DoKeyi("HouseholdMember_DOB", getJSONvalue("hhmDOB"));
-		
+		DoClicki("HouseholdMember_FirstName");
 		DoClicki("NoLink");
 		DoClicki("ContinueLink");
 	}
@@ -246,15 +246,15 @@ public class NewQuote  extends CommonLibrary{
 			System.out.println("File not found" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			System.out.println("IO EXCEPTION OCCURRED." + e.getMessage());
 			e.printStackTrace();
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
+			System.out.println("PARSE EXCEPTION OCCURRED." + e.getMessage());
 			e.printStackTrace();
 		};
 	}
 	
-	public static Object getJSONvalue(String id) {
+	public Object getJSONvalue(String id) {
 		Object jsonData = pupJSON.get(id);
         System.out.println("JSON VALUE: " + jsonData.toString());
         return jsonData;
