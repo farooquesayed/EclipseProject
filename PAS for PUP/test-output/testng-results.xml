@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="14" passed="13">
+<testng-results skipped="0" failed="0" total="14" passed="14">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="74914" started-at="2013-11-20T23:57:12Z" finished-at="2013-11-20T23:58:27Z">
+  <suite name="Default suite" duration-ms="57338" started-at="2013-11-22T20:33:33Z" finished-at="2013-11-22T20:34:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="74914" started-at="2013-11-20T23:57:12Z" finished-at="2013-11-20T23:58:27Z">
+    <test name="Default test" duration-ms="57338" started-at="2013-11-22T20:33:33Z" finished-at="2013-11-22T20:34:30Z">
       <class name="kwi.zakir.PUP.Main_SmokeTest">
-        <test-method status="PASS" signature="initialization()[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="initialization" is-config="true" duration-ms="23294" started-at="2013-11-20T15:57:12Z" finished-at="2013-11-20T15:57:35Z">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="initialization" is-config="true" duration-ms="36" started-at="2013-11-22T12:33:33Z" finished-at="2013-11-22T12:33:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="Login" duration-ms="5056" started-at="2013-11-20T15:57:35Z" finished-at="2013-11-20T15:57:40Z">
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="Login" duration-ms="8184" started-at="2013-11-22T12:33:33Z" finished-at="2013-11-22T12:33:41Z">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="StartQuote_WithAgency(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="StartQuote_WithAgency" duration-ms="7663" started-at="2013-11-20T15:57:41Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.Login" finished-at="2013-11-20T15:57:48Z">
+        <test-method status="PASS" signature="StartQuote_WithAgency(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="StartQuote_WithAgency" duration-ms="836" started-at="2013-11-22T12:33:41Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.Login" finished-at="2013-11-22T12:33:42Z">
           <params>
             <param index="0">
               <value>
@@ -38,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartQuote_WithAgency -->
-        <test-method status="PASS" signature="CustomerInformation(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="CustomerInformation" duration-ms="12031" started-at="2013-11-20T15:57:48Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.StartQuote_WithAgency" finished-at="2013-11-20T15:58:00Z">
+        <test-method status="PASS" signature="CustomerInformation(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="CustomerInformation" duration-ms="4560" started-at="2013-11-22T12:33:42Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.StartQuote_WithAgency" finished-at="2013-11-22T12:33:47Z">
           <params>
             <param index="0">
               <value>
@@ -49,7 +49,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CustomerInformation -->
-        <test-method status="PASS" signature="InsuranceProduct(boolean, int)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="InsuranceProduct" duration-ms="1356" started-at="2013-11-20T15:58:00Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.CustomerInformation" finished-at="2013-11-20T15:58:02Z">
+        <test-method status="PASS" signature="InsuranceProduct(boolean, int)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="InsuranceProduct" duration-ms="3885" started-at="2013-11-22T12:33:47Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.CustomerInformation" finished-at="2013-11-22T12:33:51Z">
           <params>
             <param index="0">
               <value>
@@ -65,7 +65,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InsuranceProduct -->
-        <test-method status="PASS" signature="GeneralAcceptabilityQuestions(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="GeneralAcceptabilityQuestions" duration-ms="2306" started-at="2013-11-20T15:58:02Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.InsuranceProduct" finished-at="2013-11-20T15:58:04Z">
+        <test-method status="PASS" signature="GeneralAcceptabilityQuestions(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="GeneralAcceptabilityQuestions" duration-ms="2681" started-at="2013-11-22T12:33:51Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.InsuranceProduct" finished-at="2013-11-22T12:33:53Z">
           <params>
             <param index="0">
               <value>
@@ -76,7 +76,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GeneralAcceptabilityQuestions -->
-        <test-method status="PASS" signature="CNI_Auto_Policy(boolean, int)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="CNI_Auto_Policy" duration-ms="8621" started-at="2013-11-20T15:58:04Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.GeneralAcceptabilityQuestions" finished-at="2013-11-20T15:58:13Z">
+        <test-method status="PASS" signature="CNI_Auto_Policy(boolean, int)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="CNI_Auto_Policy" duration-ms="7472" started-at="2013-11-22T12:33:53Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.GeneralAcceptabilityQuestions" finished-at="2013-11-22T12:34:01Z">
           <params>
             <param index="0">
               <value>
@@ -92,7 +92,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CNI_Auto_Policy -->
-        <test-method status="PASS" signature="HouseholdMember(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="HouseholdMember" duration-ms="2046" started-at="2013-11-20T15:58:13Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.CNI_Auto_Policy" finished-at="2013-11-20T15:58:15Z">
+        <test-method status="PASS" signature="HouseholdMember(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="HouseholdMember" duration-ms="2001" started-at="2013-11-22T12:34:01Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.CNI_Auto_Policy" finished-at="2013-11-22T12:34:03Z">
           <params>
             <param index="0">
               <value>
@@ -103,7 +103,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HouseholdMember -->
-        <test-method status="PASS" signature="Properties(boolean, int)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="Properties" duration-ms="2075" started-at="2013-11-20T15:58:15Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.HouseholdMember" finished-at="2013-11-20T15:58:17Z">
+        <test-method status="PASS" signature="Properties(boolean, int)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="Properties" duration-ms="2363" started-at="2013-11-22T12:34:03Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.HouseholdMember" finished-at="2013-11-22T12:34:05Z">
           <params>
             <param index="0">
               <value>
@@ -119,7 +119,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Properties -->
-        <test-method status="PASS" signature="NonCNIVehicle(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="NonCNIVehicle" duration-ms="534" started-at="2013-11-20T15:58:17Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.Properties" finished-at="2013-11-20T15:58:17Z">
+        <test-method status="PASS" signature="NonCNIVehicle(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="NonCNIVehicle" duration-ms="373" started-at="2013-11-22T12:34:05Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.Properties" finished-at="2013-11-22T12:34:05Z">
           <params>
             <param index="0">
               <value>
@@ -130,7 +130,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NonCNIVehicle -->
-        <test-method status="PASS" signature="Watercraft(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="Watercraft" duration-ms="307" started-at="2013-11-20T15:58:17Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.NonCNIVehicle" finished-at="2013-11-20T15:58:18Z">
+        <test-method status="PASS" signature="Watercraft(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="Watercraft" duration-ms="378" started-at="2013-11-22T12:34:05Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.NonCNIVehicle" finished-at="2013-11-22T12:34:06Z">
           <params>
             <param index="0">
               <value>
@@ -141,7 +141,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Watercraft -->
-        <test-method status="PASS" signature="RecreationalVehicle(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="RecreationalVehicle" duration-ms="367" started-at="2013-11-20T15:58:18Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.Watercraft" finished-at="2013-11-20T15:58:18Z">
+        <test-method status="PASS" signature="RecreationalVehicle(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="RecreationalVehicle" duration-ms="385" started-at="2013-11-22T12:34:06Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.Watercraft" finished-at="2013-11-22T12:34:06Z">
           <params>
             <param index="0">
               <value>
@@ -152,7 +152,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RecreationalVehicle -->
-        <test-method status="PASS" signature="CoveragePremium(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="CoveragePremium" duration-ms="4753" started-at="2013-11-20T15:58:18Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.RecreationalVehicle" finished-at="2013-11-20T15:58:23Z">
+        <test-method status="PASS" signature="CoveragePremium(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="CoveragePremium" duration-ms="4700" started-at="2013-11-22T12:34:06Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.RecreationalVehicle" finished-at="2013-11-22T12:34:11Z">
           <params>
             <param index="0">
               <value>
@@ -163,7 +163,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CoveragePremium -->
-        <test-method status="PASS" signature="NameInsured(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="NameInsured" duration-ms="1313" started-at="2013-11-20T15:58:23Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.CoveragePremium" finished-at="2013-11-20T15:58:24Z">
+        <test-method status="PASS" signature="NameInsured(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="NameInsured" duration-ms="945" started-at="2013-11-22T12:34:11Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.CoveragePremium" finished-at="2013-11-22T12:34:12Z">
           <params>
             <param index="0">
               <value>
@@ -174,7 +174,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NameInsured -->
-        <test-method status="FAIL" signature="PaymentMethod(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="PaymentMethod" duration-ms="9" started-at="2013-11-20T15:58:24Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.NameInsured" finished-at="2013-11-20T15:58:24Z">
+        <test-method status="PASS" signature="PaymentMethod(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="PaymentMethod" duration-ms="15316" started-at="2013-11-22T12:34:12Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.NameInsured" finished-at="2013-11-22T12:34:27Z">
           <params>
             <param index="0">
               <value>
@@ -182,44 +182,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at kwi.zakir.PUP.NewQuote.getJSONvalue(NewQuote.java:258)
-	at kwi.zakir.PUP.PaymentMethods.paperCheck(PaymentMethods.java:34)
-	at kwi.zakir.PUP.NewQuote.Payment_Method(NewQuote.java:77)
-	at kwi.zakir.PUP.Main_SmokeTest.PaymentMethod(Main_SmokeTest.java:150)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:335)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:330)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PaymentMethod -->
-        <test-method status="PASS" signature="cleanup(java.lang.String)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@69960a51]" name="cleanup" is-config="true" duration-ms="2999" started-at="2013-11-20T15:58:24Z" finished-at="2013-11-20T15:58:27Z">
+        <test-method status="PASS" signature="cleanup(java.lang.String)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@18aa83ee]" name="cleanup" is-config="true" duration-ms="3117" started-at="2013-11-22T12:34:27Z" finished-at="2013-11-22T12:34:30Z">
           <params>
             <param index="0">
               <value>

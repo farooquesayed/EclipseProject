@@ -2,6 +2,7 @@ package kwi.zakir.PUP;
 
 
 import kwi.zakir.Common.CommonLibrary;
+import kwi.zakir.Common.PUPCommon;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -12,12 +13,13 @@ import org.testng.annotations.Test;
 public class Main_SmokeTest {
 	
 	private NewQuote objPage = new NewQuote();
+	private PUPCommon cmmPUP = new PUPCommon();
 	
 	@BeforeTest
 	public void initialization() {
 		System.out.println("initialization");
-		objPage.setjsonFileName("PAS_PUP_SmokeTest.json");
-		objPage.setJSONobj("FullQuote");
+		cmmPUP.setjsonFileName("PAS_PUP_SmokeTest.json");
+		cmmPUP.setJSONobj("FullQuote");
 	}
 	
 	@Test
@@ -35,7 +37,7 @@ public class Main_SmokeTest {
 		System.out.println("StartQuote_WithAgency");
 		if(isTrue) {
 			objPage.GetQuote();
-			objPage.SelectAgency();
+			objPage.AgencySelection();
 		}
 		
 	}

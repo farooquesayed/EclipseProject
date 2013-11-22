@@ -13,7 +13,7 @@ System info: host: 'ISDEVQA2', ip: '172.16.94.61', os.name: 'Windows 7', os.arch
 Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.Select.<init>(Select.java:46)
 	at kwi.zakir.Common.CommonLibrary.DoSelecti(CommonLibrary.java:73)
-	at kwi.zakir.PUP.PaymentMethods.paperCheck(PaymentMethods.java:36)
+	at Scenarios.PaymentMethods.paperCheck(PaymentMethods.java:36)
 	at kwi.zakir.PUP.NewQuote.Payment_Method(NewQuote.java:76)
 	at kwi.zakir.PUP.Iteration01.PaymentMethod(Iteration01.java:149)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

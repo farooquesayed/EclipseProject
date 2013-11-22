@@ -1,30 +1,41 @@
 {
-    "Customer Information": {
-        "fName": "zakir1",
-        "mName": "V1"
+  "Customer Information": {
+    "fName": "zakir1",
+    "mName": "V1"
+  },
+  "Household Member": {
+    "hhmlist": [
+      {
+        "id": 1,
+		"hhmDOB": "02021970",
+        "Relationship": "Applicant"
+      },
+      {
+		"id": 2,
+        "hhmDOB": "02021980",
+        "Relationship": "Spouse"
+      }
+    ]
+  },
+  "Property": {
+    "Primary": {
+      "propYearBuilt": "2010"
     },
-    "Household Member": [
-        {
-            "hhmDOB": "02021970",
-            "Relationship": "Applicant"
-        },
-        {
-            "hhmDOB": "02021980",
-            "Relationship": "Spouse"
-        }
+    "Secondary": [
+      {
+        "propYearBuilt": "2012"
+      },
+      {
+        "propYearBuilt": "1937"
+      }
     ],
-    "Property": {
-        "Primary": 
-            {
-                "propYearBuilt": "2010"
-            }
-        ,
-        "Secondary": 
-            {"propYearBuilt": "2010"},
-
-        "Rental": 
-            {
-                "propYearBuilt": "2010"
-            }
-    }
+    "Rental": [
+      {
+        "propYearBuilt": "1239"
+      },
+      {
+        "propYearBuilt": "5005"
+      }
+    ]
+  }
 }

@@ -2,6 +2,7 @@ package kwi.zakir.PUP;
 
 
 import kwi.zakir.Common.CommonLibrary;
+import kwi.zakir.Common.PUPCommon;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -9,14 +10,17 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import Scenarios.PaymentMethods;
+
 public class Main {
 	
 	private NewQuote objPage = new NewQuote();
+	private PUPCommon cmmPUP = new PUPCommon();
 	
 	@BeforeTest
 	public void initialization() {
 		System.out.println("initialization");
-		objPage.setJSONobj("PAS_PUP_SmokeTest");
+		cmmPUP.setJSONobj("PAS_PUP_SmokeTest");
 	}
 	
 	@Test
@@ -34,7 +38,7 @@ public class Main {
 		System.out.println("StartQuote_WithAgency");
 		if(isTrue) {
 			objPage.GetQuote();
-			objPage.SelectAgency();
+			objPage.AgencySelection();
 		}
 		
 	}
@@ -147,6 +151,8 @@ public class Main {
 		System.out.println("PaymentMethod");
 		if(isTrue) {
 			objPage.Payment_Method();
+			PaymentMethods pupPayType = new PaymentMethods();
+			pupPayType.CreditCard();
 		}
 	}
 

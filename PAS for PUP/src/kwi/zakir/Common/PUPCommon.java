@@ -1,41 +1,46 @@
-package com.zakir.java;
+package kwi.zakir.Common;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-
-public class Class3 {
+public class PUPCommon {
 	public JSONParser parser = new JSONParser();
-	public JSONObject a;
-	public JSONObject pupJSON;
-	
+	private String jsonFileName;
+	private static JSONObject pupJSON, a;
+
+
+	public void setjsonFileName(String filename) {
+		this.jsonFileName = filename;
+	}
+
 	public void setJSONobj(Object key) {
-		
+
 		try {
-			a = (JSONObject) parser.parse(new FileReader("./test.json"));
-	        pupJSON = (JSONObject) a.get(key);
-	        
+			a = (JSONObject) parser.parse(new FileReader("./bin/"
+					+ this.jsonFileName));
+			PUPCommon.pupJSON = (JSONObject) a.get(key);
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found" + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			System.out.println("IO EXCEPTION OCCURRED." + e.getMessage());
 			e.printStackTrace();
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
+			System.out.println("PARSE EXCEPTION OCCURRED." + e.getMessage());
 			e.printStackTrace();
-		};
+		}
+		;
 	}
-	
-	
+
+	public Object getJSONvalue(String id) {
+		return getJSONvalue(id, -1);
+	}
+
 	public Object getJSONvalue(String id, int index) {
 
 		Object jsonData = "";
