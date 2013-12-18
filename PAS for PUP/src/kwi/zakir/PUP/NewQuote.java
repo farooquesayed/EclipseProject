@@ -145,8 +145,8 @@ public class NewQuote extends CommonLibrary {
 
 	public void Customer_Information() {
 		System.out.println("Entering Customer Information");
-		DoKeyi("FirstName", cmmPUP.getJSONvalue("fName"));
 		DoKeyi("MiddleName", cmmPUP.getJSONvalue("mName"));
+		DoKeyi("FirstName", cmmPUP.getJSONvalue("fName"));
 		DoKeyi("LastName", cmmPUP.getJSONvalue("lName"));
 
 		DoSelecti("PrimaryPhone_PhoneTypeId", cmmPUP.getJSONvalue("phnType"));
