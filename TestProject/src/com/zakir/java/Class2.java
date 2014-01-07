@@ -5,8 +5,10 @@ package com.zakir.java;
 
 public class Class2 implements Runnable {
 	
-
+	public static int counter = 2;
+	
 	public static void main(String[] args) {
+		
 		Thread t = new Thread(new Class2());
 		t.start();
 		String threadName =
@@ -31,8 +33,8 @@ public class Class2 implements Runnable {
 	    	
 	}
 		
-	static void interruptthreadMessage() {
-
+	void interruptthreadMessage() {
+		counter = 3;
 	}
 	
 	@Override

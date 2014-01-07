@@ -1,10 +1,28 @@
 package com.zakir.java;
 
 
-public interface Class1
+public class Class1 
 {
+
+	public int counter=0;
 	
-	public void interfaceMethod();
+//	public Class1() {
+//		
+//	}
+	
+	private  Class1(String name) {
+		this.counter = name.length();
+	}
+			
+	
+	public Class1() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public void printCounter() {
+		System.out.println(this.counter);
+	}
 	
 }
 
