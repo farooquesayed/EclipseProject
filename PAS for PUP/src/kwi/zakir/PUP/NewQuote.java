@@ -207,7 +207,7 @@ public class NewQuote extends CommonLibrary {
 		}
 
 		CommonLibrary.init_Driver(DRIVER);
-		DRIVER.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//DRIVER.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
 //

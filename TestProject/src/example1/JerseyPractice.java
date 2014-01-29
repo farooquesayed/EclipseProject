@@ -9,6 +9,8 @@ import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.core.util.MultivaluedMapImpl;
+import org.apache.axis.client.Call;
+import org.apache.axis.client.Service;
 
 public class JerseyPractice {
 

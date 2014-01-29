@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="2" failed="1" total="14" passed="11">
+<testng-results skipped="11" failed="1" total="14" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44155" started-at="2013-12-12T21:47:35Z" finished-at="2013-12-12T21:48:20Z">
+  <suite name="Default suite" duration-ms="12121" started-at="2014-01-16T16:07:50Z" finished-at="2014-01-16T16:08:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44155" started-at="2013-12-12T21:47:35Z" finished-at="2013-12-12T21:48:20Z">
+    <test name="Default test" duration-ms="12121" started-at="2014-01-16T16:07:50Z" finished-at="2014-01-16T16:08:03Z">
       <class name="kwi.zakir.PUP.Main_SmokeTest">
-        <test-method status="PASS" signature="initialization()[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="initialization" is-config="true" duration-ms="62" started-at="2013-12-12T13:47:36Z" finished-at="2013-12-12T13:47:36Z">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="initialization" is-config="true" duration-ms="16" started-at="2014-01-16T08:07:50Z" finished-at="2014-01-16T08:07:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="Login" duration-ms="10576" started-at="2013-12-12T13:47:36Z" finished-at="2013-12-12T13:47:46Z">
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="Login" duration-ms="7768" started-at="2014-01-16T08:07:50Z" finished-at="2014-01-16T08:07:58Z">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="StartQuote_WithAgency(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="StartQuote_WithAgency" duration-ms="1330" started-at="2013-12-12T13:47:46Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.Login" finished-at="2013-12-12T13:47:47Z">
+        <test-method status="PASS" signature="StartQuote_WithAgency(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="StartQuote_WithAgency" duration-ms="1191" started-at="2014-01-16T08:07:58Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.Login" finished-at="2014-01-16T08:07:59Z">
           <params>
             <param index="0">
               <value>
@@ -38,121 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartQuote_WithAgency -->
-        <test-method status="PASS" signature="CustomerInformation(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="CustomerInformation" duration-ms="3925" started-at="2013-12-12T13:47:48Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.StartQuote_WithAgency" finished-at="2013-12-12T13:47:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CustomerInformation -->
-        <test-method status="PASS" signature="InsuranceProduct(boolean, int)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="InsuranceProduct" duration-ms="2527" started-at="2013-12-12T13:47:51Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.CustomerInformation" finished-at="2013-12-12T13:47:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[7]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InsuranceProduct -->
-        <test-method status="PASS" signature="GeneralAcceptabilityQuestions(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="GeneralAcceptabilityQuestions" duration-ms="1547" started-at="2013-12-12T13:47:54Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.InsuranceProduct" finished-at="2013-12-12T13:47:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GeneralAcceptabilityQuestions -->
-        <test-method status="PASS" signature="CNI_Auto_Policy(boolean, int)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="CNI_Auto_Policy" duration-ms="2680" started-at="2013-12-12T13:47:56Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.GeneralAcceptabilityQuestions" finished-at="2013-12-12T13:47:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[-7]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CNI_Auto_Policy -->
-        <test-method status="PASS" signature="HouseholdMember(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="HouseholdMember" duration-ms="3615" started-at="2013-12-12T13:47:58Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.CNI_Auto_Policy" finished-at="2013-12-12T13:48:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HouseholdMember -->
-        <test-method status="PASS" signature="Properties(boolean, int)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="Properties" duration-ms="3203" started-at="2013-12-12T13:48:02Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.HouseholdMember" finished-at="2013-12-12T13:48:05Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[-7]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Properties -->
-        <test-method status="PASS" signature="NonCNIVehicle(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="NonCNIVehicle" duration-ms="701" started-at="2013-12-12T13:48:05Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.Properties" finished-at="2013-12-12T13:48:06Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NonCNIVehicle -->
-        <test-method status="PASS" signature="Watercraft(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="Watercraft" duration-ms="458" started-at="2013-12-12T13:48:06Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.NonCNIVehicle" finished-at="2013-12-12T13:48:06Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Watercraft -->
-        <test-method status="PASS" signature="RecreationalVehicle(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="RecreationalVehicle" duration-ms="326" started-at="2013-12-12T13:48:06Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.Watercraft" finished-at="2013-12-12T13:48:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RecreationalVehicle -->
-        <test-method status="FAIL" signature="CoveragePremium(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="CoveragePremium" duration-ms="10062" started-at="2013-12-12T13:48:07Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.RecreationalVehicle" finished-at="2013-12-12T13:48:17Z">
+        <test-method status="FAIL" signature="CustomerInformation(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="CustomerInformation" duration-ms="33" started-at="2014-01-16T08:07:59Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.StartQuote_WithAgency" finished-at="2014-01-16T08:07:59Z">
           <params>
             <param index="0">
               <value>
@@ -164,26 +50,26 @@
             <message>
               <![CDATA[no such element
   (Session info: chrome=31.0.1650.63)
-  (Driver info: chromedriver=2.3,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.02 seconds
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 28 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.37.0', revision: 'a7c61cb', time: '2013-10-18 17:14:00'
 System info: host: 'ISDEVQA2', ip: '172.16.94.61', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_21'
-Session ID: 3748e6c488b807871a7b1ea673e884db
+Session ID: 272291d8d35c24bbca4f6d880aff183e
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={chromedriverVersion=2.3}, rotatable=false, locationContextEnabled=true, version=31.0.1650.63, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\zakirs\AppData\Local\Temp\scoped_dir4592_30321}, rotatable=false, locationContextEnabled=true, version=31.0.1650.63, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
   (Session info: chrome=31.0.1650.63)
-  (Driver info: chromedriver=2.3,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.02 seconds
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 28 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.37.0', revision: 'a7c61cb', time: '2013-10-18 17:14:00'
 System info: host: 'ISDEVQA2', ip: '172.16.94.61', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_21'
-Session ID: 3748e6c488b807871a7b1ea673e884db
+Session ID: 272291d8d35c24bbca4f6d880aff183e
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={chromedriverVersion=2.3}, rotatable=false, locationContextEnabled=true, version=31.0.1650.63, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\zakirs\AppData\Local\Temp\scoped_dir4592_30321}, rotatable=false, locationContextEnabled=true, version=31.0.1650.63, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -195,9 +81,9 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browser
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:348)
 	at org.openqa.selenium.By$ById.findElement(By.java:220)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at kwi.zakir.Common.CommonLibrary.DoClicki(CommonLibrary.java:60)
-	at kwi.zakir.PUP.NewQuote.Coverage_Premium(NewQuote.java:45)
-	at kwi.zakir.PUP.Main_SmokeTest.CoveragePremium(Main_SmokeTest.java:135)
+	at kwi.zakir.Common.CommonLibrary.DoKeyi(CommonLibrary.java:81)
+	at kwi.zakir.PUP.NewQuote.Customer_Information(NewQuote.java:148)
+	at kwi.zakir.PUP.Main_SmokeTest.CustomerInformation(Main_SmokeTest.java:50)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -227,16 +113,52 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browser
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- CustomerInformation -->
+        <test-method status="SKIP" signature="InsuranceProduct(boolean, int)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="InsuranceProduct" duration-ms="1" started-at="2014-01-16T08:08:00Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.CustomerInformation" finished-at="2014-01-16T08:08:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InsuranceProduct -->
+        <test-method status="SKIP" signature="GeneralAcceptabilityQuestions(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="GeneralAcceptabilityQuestions" duration-ms="1" started-at="2014-01-16T08:08:00Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.InsuranceProduct" finished-at="2014-01-16T08:08:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GeneralAcceptabilityQuestions -->
+        <test-method status="SKIP" signature="CNI_Auto_Policy(boolean, int)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="CNI_Auto_Policy" duration-ms="0" started-at="2014-01-16T08:08:00Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.GeneralAcceptabilityQuestions" finished-at="2014-01-16T08:08:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CNI_Auto_Policy -->
+        <test-method status="SKIP" signature="HouseholdMember(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="HouseholdMember" duration-ms="0" started-at="2014-01-16T08:08:00Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.CNI_Auto_Policy" finished-at="2014-01-16T08:08:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HouseholdMember -->
+        <test-method status="SKIP" signature="Properties(boolean, int)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="Properties" duration-ms="0" started-at="2014-01-16T08:08:00Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.HouseholdMember" finished-at="2014-01-16T08:08:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Properties -->
+        <test-method status="SKIP" signature="NonCNIVehicle(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="NonCNIVehicle" duration-ms="0" started-at="2014-01-16T08:08:00Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.Properties" finished-at="2014-01-16T08:08:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NonCNIVehicle -->
+        <test-method status="SKIP" signature="Watercraft(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="Watercraft" duration-ms="0" started-at="2014-01-16T08:08:00Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.NonCNIVehicle" finished-at="2014-01-16T08:08:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Watercraft -->
+        <test-method status="SKIP" signature="RecreationalVehicle(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="RecreationalVehicle" duration-ms="0" started-at="2014-01-16T08:08:00Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.Watercraft" finished-at="2014-01-16T08:08:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RecreationalVehicle -->
+        <test-method status="SKIP" signature="CoveragePremium(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="CoveragePremium" duration-ms="0" started-at="2014-01-16T08:08:00Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.RecreationalVehicle" finished-at="2014-01-16T08:08:00Z">
+          <reporter-output>
+          </reporter-output>
         </test-method> <!-- CoveragePremium -->
-        <test-method status="SKIP" signature="NameInsured(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="NameInsured" duration-ms="0" started-at="2013-12-12T13:48:17Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.CoveragePremium" finished-at="2013-12-12T13:48:17Z">
+        <test-method status="SKIP" signature="NameInsured(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="NameInsured" duration-ms="0" started-at="2014-01-16T08:08:00Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.CoveragePremium" finished-at="2014-01-16T08:08:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NameInsured -->
-        <test-method status="SKIP" signature="PaymentMethod(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="PaymentMethod" duration-ms="0" started-at="2013-12-12T13:48:17Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.NameInsured" finished-at="2013-12-12T13:48:17Z">
+        <test-method status="SKIP" signature="PaymentMethod(boolean)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="PaymentMethod" duration-ms="1" started-at="2014-01-16T08:08:00Z" depends-on-methods="kwi.zakir.PUP.Main_SmokeTest.NameInsured" finished-at="2014-01-16T08:08:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PaymentMethod -->
-        <test-method status="PASS" signature="cleanup(java.lang.String)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@28fe2250]" name="cleanup" is-config="true" duration-ms="3021" started-at="2013-12-12T13:48:17Z" finished-at="2013-12-12T13:48:20Z">
+        <test-method status="PASS" signature="cleanup(java.lang.String)[pri:0, instance:kwi.zakir.PUP.Main_SmokeTest@2d73b676]" name="cleanup" is-config="true" duration-ms="3015" started-at="2014-01-16T08:08:00Z" finished-at="2014-01-16T08:08:03Z">
           <params>
             <param index="0">
               <value>
