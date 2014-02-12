@@ -1,0 +1,17 @@
+package com.zakir.java;
+
+//import org.junit.Before;
+//import org.junit.Test;
+
+public class Class2  {
+	
+	public static int counter = 2;
+	
+	public static void main(String[] args) {
+		
+	    	
+	}
+		
+
+
+}

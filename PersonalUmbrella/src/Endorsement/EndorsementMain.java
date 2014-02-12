@@ -14,20 +14,21 @@ public WebDriver DRIVER;
 	
 	public String bType;
 	
+	
 	public EndorsementMain(String type) {
 		this.bType = type;
 		setBrowserdriver(this.bType);
 		Ed1 tc1 = new Ed1(DRIVER);
-		tc1.StartEndorsement();
+		tc1.StartEndorsement();		
 	}
 	
-	public void DriveEndorsement() {
-		Thread t1 = new Thread(new EndorsementMain("CR"));
-		t1.start();
-
-//		Thread t2 = new Thread(new EndorsementMain("FF"));
+//	public void DriveEndorsement() {
+//		Thread t1 = new Thread(new EndorsementMain("CR"));
+//		t1.start();
+//
+//		Thread t2 = new Thread(new EndorsementMain("IE"));
 //		t2.start();
-	}
+//	}
 	
 	@Override
 	public void run() {
@@ -82,7 +83,7 @@ public WebDriver DRIVER;
 
 		switch (browserDriver) {
 		case "IE": {
-			File file = new File("S:/Zakir/jre7/bin/IEDriverServer.exe");
+			File file = new File("../Libraries/IEDriverServer.exe");
 			System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
 			DRIVER = new InternetExplorerDriver();
 			break;
@@ -92,7 +93,7 @@ public WebDriver DRIVER;
 			break;
 		}
 		case "CR": {
-			File file = new File("S:/Zakir/jre7/bin/chromedriver.exe");
+			File file = new File("../Libraries/chromedriver.exe");
 			System.setProperty("webdriver.chrome.driver",
 					file.getAbsolutePath());
 			DRIVER = new ChromeDriver();

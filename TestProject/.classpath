@@ -2,9 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="C:/Zakir/GitHub/EclipseProject/Libraries/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Zakir/GitHub/EclipseProject/Libraries/selenium-server-standalone-2.32.0.jar"/>
-	<classpathentry kind="lib" path="C:/Zakir/GitHub/EclipseProject/Libraries/jersey-bundle-1.17.1.jar"/>
-	<classpathentry kind="lib" path="C:/Zakir/GitHub/EclipseProject/Libraries/soapui-4.5.0.jar"/>
+	<classpathentry kind="lib" path="/Users/admin/Box Documents/Zack Data/GitHub/EclipseProject/Libraries/selenium-server-standalone-2.32.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -8,7 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CommonFunctions {
-
+	
 	public static String Extract_Amount(String testStr) {
 		Pattern p = Pattern.compile("-?[0-9]+,\\d+");
 		Matcher m = p.matcher(testStr);

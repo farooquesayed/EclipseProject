@@ -1,5 +1,9 @@
 package com.zakir.java;
 
+import java.io.File;
+
+import org.junit.Test;
+
 
 public class Class1 
 {
@@ -10,10 +14,13 @@ public class Class1
 //		
 //	}
 	
-	private  Class1(String name) {
-		this.counter = name.length();
+	@Test
+	public void testFolderLocation() {
+		//File f = new File(IEDriverServerLocation);
+		
+		System.out.println(System.getProperty("user.dir"));
 	}
-			
+		
 	
 	public Class1() {
 		// TODO Auto-generated constructor stub

@@ -14,4 +14,31 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/CommonLibrary</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/PersonalUmbrella/src/CommonLibrary</locationURI>
+		</link>
+		<link>
+			<name>src/Endorsement</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/PersonalUmbrella/src/Endorsement</locationURI>
+		</link>
+		<link>
+			<name>src/FullQuote</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/PersonalUmbrella/src/FullQuote</locationURI>
+		</link>
+		<link>
+			<name>src/ParallelProcessing</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/PersonalUmbrella/src/ParallelProcessing</locationURI>
+		</link>
+		<link>
+			<name>src/Reinstate_Cancel</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/PersonalUmbrella/src/Reinstate_Cancel</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
