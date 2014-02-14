@@ -57,6 +57,7 @@ public class CommonLibrary {
 	}
 
 	public void DoClicki(String objID) {
+		System.out.println("Clicking at: " + objID);
 		commDRIVER.findElement(By.id(objID)).click();
 	}
 
@@ -113,7 +114,7 @@ public class CommonLibrary {
 			break;
 		}
 		case "CR": {
-			//xKillIEs("chromedriver.exe");
+			xKillIEs("chromedriver.exe");
 			break;
 		}
 		default:

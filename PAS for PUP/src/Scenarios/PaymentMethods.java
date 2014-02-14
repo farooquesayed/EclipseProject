@@ -65,7 +65,7 @@ public class PaymentMethods extends CommonLibrary{
 	public void paperCheck() {
 		System.out.println("Entering Payment Method");
 		DoSelecti("PaymentTypeId", cmmPUP.getJSONvalue("paymentTypeId"));
-		addDelay(3000);
+		addDelay(1000);
 		WaitProperty_Click("PaymentMsgNo");
 		DoKeyi("CheckNumber", cmmPUP.getJSONvalue("CheckNumber"));
 	}
