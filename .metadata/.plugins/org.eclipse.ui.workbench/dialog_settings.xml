@@ -12,8 +12,6 @@
 		<list key="textEntries">
 		</list>
 	</section>
-	<section name="NewWizardAction">
-	</section>
 	<section name="ZipFileExportWizard">
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID"/>
@@ -21,6 +19,8 @@
 			<item value="/Users/admin/Box Documents/Zack Data/InterviewProjectForSiva.zip"/>
 			<item value="/Users/admin/Box Documents/Zack Data/GitHub/EclipseProject/ZakirInterviewWithSiva.zip"/>
 		</list>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 	<section name="ImportExportAction">
 		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
