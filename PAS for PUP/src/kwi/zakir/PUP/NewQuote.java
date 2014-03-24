@@ -1,6 +1,7 @@
 package kwi.zakir.PUP;
 
 import java.io.File;
+
 import java.util.concurrent.TimeUnit;
 import kwi.zakir.Common.CommonLibrary;
 import kwi.zakir.Common.PUPCommon;
@@ -11,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.Assert;
 
 import Scenarios.PaymentMethods;
 
@@ -24,25 +26,32 @@ public class NewQuote extends CommonLibrary {
 
 	public void Non_CNI_Vehicle() {
 		System.out.println("Entering Non CNI Vehicle");
-
-		DoClicki("ContinueLink");
+		boolean obj = DRIVER.findElements(By.id("AddVehicle")).size() != 0;
+		
+		if(obj)
+			DoClicki("ContinueLink");
 	}
 
 	public void Watercraft() {
 		System.out.println("Entering Watercraft");
-
-		DoClicki("ContinueLink");
+		boolean obj = DRIVER.findElements(By.id("AddWatercraft")).size() != 0;
+		
+		if(obj)
+			DoClicki("ContinueLink");
 	}
 
 	public void Recreational_Vehicle() {
-		System.out.println("Entering recreational Vehicle");
-
-		DoClicki("ContinueLink");
+		System.out.println("Entering recreational Vehicle information");
+		boolean obj = DRIVER.findElements(By.id("AddRecVehicle")).size() != 0;
+		System.out.println("RecVeh size = " + DRIVER.findElements(By.id("AddRecVehicle")).size());
+		
+		if(obj)
+			DoClicki("ContinueLink");
 	}
 
 	public void Coverage_Premium() {
 		System.out.println("Entering Coverage Premium");
-		DoClicki("qpbb2_SelectPolicy");
+		DoClicki("rdoViewPolicDetail3");
 		DoClicki("ContinueLink");
 	}
 
@@ -58,19 +67,22 @@ public class NewQuote extends CommonLibrary {
 	
  	public void Payment_Method() {
  		System.out.println("Entering Payment Method");
-		DoSelecti("PaymentTypeId", 1);
-		DoSelecti("CardTypeId", 1);
-		DoKeyi("CardNumber", "4111111111111111");
-		DoKeyi("SecurityCode", "111");
-		DoSelecti("Month", 2);
-		DoSelecti("Year", 2);
-		DoSelecti("PaymentTypeId", cmmPUP.getJSONvalue("paymentTypeId"));
-		DoSelecti("CardTypeId", cmmPUP.getJSONvalue("cardTypeId"));
-		DoKeyi("CardNumber", cmmPUP.getJSONvalue("CardNumber"));
-		DoKeyi("SecurityCode", cmmPUP.getJSONvalue("SecurityCode"));
-		DoSelecti("Month", cmmPUP.getJSONvalue("Month"));
-		DoSelecti("Year", cmmPUP.getJSONvalue("Year"));
- 
+//		DoSelecti("PaymentTypeId", 1);
+//		DoSelecti("CardTypeId", 1);
+//		DoKeyi("CardNumber", "4111111111111111");
+//		DoKeyi("SecurityCode", "111");
+//		DoSelecti("Month", 2);
+//		DoSelecti("Year", 2);
+//		DoSelecti("PaymentTypeId", cmmPUP.getJSONvalue("paymentTypeId"));
+//		DoSelecti("CardTypeId", cmmPUP.getJSONvalue("cardTypeId"));
+//		DoKeyi("CardNumber", cmmPUP.getJSONvalue("CardNumber"));
+//		DoKeyi("SecurityCode", cmmPUP.getJSONvalue("SecurityCode"));
+//		DoSelecti("Month", cmmPUP.getJSONvalue("Month"));
+//		DoSelecti("Year", cmmPUP.getJSONvalue("Year"));
+		
+		PaymentMethods pm = new PaymentMethods();
+		pm.Payment_Method(Integer.parseInt(cmmPUP.getJSONvalue("paymentTypeId").toString()));
+		
  		DoClicki("ContinueLink");
  	}
 
@@ -137,7 +149,7 @@ public class NewQuote extends CommonLibrary {
 		DoKeyi("EffectiveDate", CustomDate(dateValue, true) + Keys.TAB);
 
 		if (dateValue <= 0) {
-			addDelay(3000);
+			addDelay(1000);
 			DoClicki("Continue");
 		} else
 			DoClicki("ContinueLink");
@@ -165,7 +177,7 @@ public class NewQuote extends CommonLibrary {
 
 	public void GetQuote() {
 		System.out.println("Starting Quote");
-		DoClicki("btnGetQuote");
+		DoClicki("actionNewQuote");
 	}
 
 	public void AgencySelection() {
@@ -207,112 +219,8 @@ public class NewQuote extends CommonLibrary {
 		}
 
 		CommonLibrary.init_Driver(DRIVER);
-		//DRIVER.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		DRIVER.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 	}
-//
-//	public void setJSONobj_old(String jsonFileName) {
-//		JSONArray a;
-//		try {
-//			a = (JSONArray) parser
-//					.parse(new FileReader("./bin/" + jsonFileName));
-//			this.pupJSON = (JSONObject) a.get(0);
-//		} catch (FileNotFoundException e) {
-//			System.out.println("File not found" + e.getMessage());
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (ParseException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		;
-//	}
-//	
-//
-//	public void setjsonFileName(String filename) {
-//		this.jsonFileName = filename;
-//	}
-//
-//	public void setJSONobj(Object key) {
-//
-//		try {
-//			a = (JSONObject) parser.parse(new FileReader("./bin/"
-//					+ this.jsonFileName));
-//			pupJSON = (JSONObject) a.get(key);
-//		} catch (FileNotFoundException e) {
-//			System.out.println("File not found" + e.getMessage());
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			System.out.println("IO EXCEPTION OCCURRED." + e.getMessage());
-//			e.printStackTrace();
-//		} catch (ParseException e) {
-//			System.out.println("PARSE EXCEPTION OCCURRED." + e.getMessage());
-//			e.printStackTrace();
-//		}
-//		;
-//	}
-//
-//	public Object cmmPUP.getJSONvalue(String id) {
-//		return cmmPUP.getJSONvalue(id, -1);
-//	}
-//
-//	public Object cmmPUP.getJSONvalue(String id, int index) {
-//
-//		Object jsonData = "";
-//		String sGetKey = "";
-//		String[] sSplit = id.split("\\.");
-//
-//		sGetKey = sSplit[sSplit.length - 1];
-//
-//		if (index != -1) {
-//			jsonData = pupJSON.get(sSplit[0]).toString();
-//			String rawData = jsonData.toString();
-//			String[] sData = rawData.split("\\}\\,\\{");
-//			return parseValue("{" + sData[index] + "}", sGetKey);
-//		} else if (id.indexOf(".") != -1) {
-//			for (int i = 0; i <= sSplit.length - 2; i++) {
-//				jsonData = pupJSON.get(sSplit[i]).toString();
-//			}
-//
-//			sGetKey = sSplit[sSplit.length - 1];
-//			return parseValue(jsonData, sGetKey);
-//		}
-//
-//		else {
-//			jsonData = pupJSON.get(id);
-//			System.out.println("JSON VALUE: " + jsonData.toString());
-//			return jsonData;
-//		}
-//
-//	}
-//
-//	public Object parseValue(Object jsonData, String sGetKey) {
-//
-//		try {
-//			String rawData = jsonData.toString();
-//			rawData = rawData.replace("[", "");
-//			rawData = rawData.replace("]", "");
-//			rawData = rawData.replace("{{", "{");
-//			rawData = rawData.replace("}}", "}");
-//			pupJSON = (JSONObject) parser.parse(rawData);
-//			jsonData = pupJSON.get(sGetKey);
-//			System.out.println("JSON VALUE: " + jsonData.toString());
-//			return jsonData;
-//
-//		} catch (ParseException e) {
-//			System.out.println("Error");
-//			e.printStackTrace();
-//		}
-//		return null;
-//
-//	}
-
-	// public Object cmmPUP.getJSONvalue(String id) {
-	// Object jsonData = pupJSON.get(id);
-	// System.out.println("JSON VALUE: " + jsonData.toString());
-	// return jsonData;
-	// }
 
 }

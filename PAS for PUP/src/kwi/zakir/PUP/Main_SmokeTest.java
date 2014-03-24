@@ -26,7 +26,7 @@ public class Main_SmokeTest {
 	@Parameters ({"Browser", "baseURL"})
 	public void Login(@Optional("CR") String Browser, @Optional("http://pasqa/pup") String baseURL) {
 		System.out.println("Login");
-
+		CommonLibrary.TearDown(Browser);
 		objPage.setBrowserdriver(Browser);
 		objPage.devLogin(baseURL);		
 	}
@@ -55,7 +55,7 @@ public class Main_SmokeTest {
 
 	@Test(dependsOnMethods = { "CustomerInformation" })
 	@Parameters ({"isInsProd", "EffDate"})
-	public void InsuranceProduct(@Optional("true") boolean isTrue, @Optional("7") int dateValue) {
+	public void InsuranceProduct(@Optional("true") boolean isTrue, @Optional("-363") int dateValue) {
 		System.out.println("InsuranceProduct");
 		if(isTrue) {
 			objPage.Insurance_Product(dateValue);
@@ -73,7 +73,7 @@ public class Main_SmokeTest {
 	
 	@Test(dependsOnMethods = { "GeneralAcceptabilityQuestions" })
 	@Parameters ({"isCNIauto", "EffDate"})
-	public void CNI_Auto_Policy(@Optional("true") boolean isTrue, @Optional("-7") int dateValue) {
+	public void CNI_Auto_Policy(@Optional("true") boolean isTrue, @Optional("-363") int dateValue) {
 		System.out.println("CNI_Auto_Policy");
 		if(isTrue) {
 			objPage.CNI_Auto_Policy(dateValue);
@@ -85,7 +85,6 @@ public class Main_SmokeTest {
 	public void HouseholdMember(@Optional("true") boolean isTrue) {
 		System.out.println("HouseholdMember");
 		if(isTrue) {
-			//CommonLibrary.addDelay(3000);
 			objPage.Household_Member();
 		}
 	}
@@ -93,7 +92,7 @@ public class Main_SmokeTest {
 	
 	@Test(dependsOnMethods = { "HouseholdMember" })
 	@Parameters ({"isProp", "EffDate"})
-	public void Properties(@Optional("true") boolean isTrue, @Optional("-7") int dateValue) {
+	public void Properties(@Optional("true") boolean isTrue, @Optional("-363") int dateValue) {
 		System.out.println("Properties");
 		if(isTrue) {
 			objPage.Properties(dateValue);

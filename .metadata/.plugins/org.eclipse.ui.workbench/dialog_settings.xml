@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="900" key="dialogWidth"/>
-		<item value="563" key="dialogHeight"/>
+		<item value="1440" key="dialogWidth"/>
+		<item value="760" key="dialogHeight"/>
 		<list key="orderedProviders">
 		</list>
 		<list key="textArray">
@@ -12,6 +12,15 @@
 		<list key="textEntries">
 		</list>
 	</section>
+<<<<<<< HEAD
+=======
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+		<item value="279" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+>>>>>>> 3c0f3c4ae704e46d04f23ebf47fc800158115cec
 	<section name="ZipFileExportWizard">
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID"/>
