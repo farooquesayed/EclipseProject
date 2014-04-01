@@ -1,0 +1,5 @@
+package com.zakir.java;
+
+public interface Company {
+	
+}

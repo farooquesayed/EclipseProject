@@ -1,0 +1,8 @@
+package com.zakir.java;
+
+
+public class Class3 {
+	public void main(String args[]) {
+		
+	}
+}

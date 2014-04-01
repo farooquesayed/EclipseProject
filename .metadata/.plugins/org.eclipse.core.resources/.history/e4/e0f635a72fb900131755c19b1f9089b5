@@ -1,0 +1,8 @@
+package com.zakir.java;
+
+public interface Company {
+	
+	
+	public void Humangroup();
+	public void Machinegroup();
+}

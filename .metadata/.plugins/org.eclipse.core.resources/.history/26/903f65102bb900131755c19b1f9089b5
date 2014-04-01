@@ -1,0 +1,21 @@
+package com.zakir.java;
+
+import java.io.File;
+import java.net.URI;
+
+//import org.junit.Before;
+//import org.junit.Test;
+
+public class Class2  {
+	
+	public static void main(String[] args) {
+		
+		Class1 wdSerialize = new Class1();
+		wdSerialize.browserLaunched = false;
+		wdSerialize.executionState += "SerializedClassCall";
+		
+	}
+		
+
+
+}

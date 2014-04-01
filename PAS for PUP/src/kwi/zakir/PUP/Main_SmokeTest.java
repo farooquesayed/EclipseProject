@@ -151,9 +151,14 @@ public class Main_SmokeTest {
 			objPage.Payment_Method();
 		}
 	}
+	
+	@Test(dependsOnMethods = { "PaymentMethod" })
+	public void SendEmail() {
+		System.out.println("Sending Email.");
+		CommonLibrary.SendEmail("zakirsayed@cnico.com", "Quote created: " + 
+					objPage.getQuoteNumber() , "");
+	}
 
-	
-	
 	@AfterTest
 	@Parameters ({"Browser"})
 	public void cleanup(@Optional("IE") String Browser) {

@@ -1,0 +1,9 @@
+package com.zakir.java;
+
+public interface Company {
+	
+	public int headcount;
+	
+	public void Humangroup();
+	public void Machinegroup();
+}

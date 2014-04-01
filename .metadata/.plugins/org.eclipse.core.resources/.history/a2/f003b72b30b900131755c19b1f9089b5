@@ -1,0 +1,41 @@
+package com.zakir.java;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.net.URI;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+//import org.junit.Before;
+//import org.junit.Test;
+
+public class Class2  {
+	
+	public static void main(String[] args) {
+		
+		Class1 wdSerialize = new Class1();
+		wdSerialize = new FirefoxDriver();
+		myDriver.get("http://www.cnico.com");
+
+		wdSerialize.browserLaunched = true;
+		wdSerialize.executionState += "SerializedClassCall";
+		
+		try {
+			FileOutputStream fileOut = new FileOutputStream("/webdriver.ser");
+			ObjectOutputStream out = new ObjectOutputStream(fileOut);
+			out.writeObject(wdSerialize);
+			out.close();
+			fileOut.close();
+			System.out.printf("Serialized data is saved in /webdriver.ser");
+		}
+		catch (IOException i)
+		{
+			i.printStackTrace();
+		}
+	}
+		
+
+
+}

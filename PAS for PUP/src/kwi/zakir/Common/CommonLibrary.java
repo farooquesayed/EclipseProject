@@ -8,8 +8,16 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -120,6 +128,34 @@ public class CommonLibrary {
 		default:
 			break;
 		}
+	}
+	
+	public static void SendEmail(String to, String Subject, String Body) {
+	      //String to = "zakirhere@gmail.com";
+	      String from = "zakirsayed@cnico.com";
+	      String host = "kwnhmail";
+
+	      Properties properties = System.getProperties();
+	      properties.setProperty("mail.smtp.host", host);
+
+	      // Get the default Session object.
+	      Session session = Session.getDefaultInstance(properties);
+	      try{
+	         MimeMessage message = new MimeMessage(session);
+	         message.setFrom(new InternetAddress(from));
+	         message.addRecipient(Message.RecipientType.TO,
+	                                  new InternetAddress(to));
+
+	         message.setSubject(Subject);
+
+	         message.setText(Body);
+
+	         Transport.send(message);
+	         System.out.println("Sent message successfully....");
+	      }catch (MessagingException mex) {
+	         mex.printStackTrace();
+	      }
+
 	}
 	
 

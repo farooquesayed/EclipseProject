@@ -1,0 +1,26 @@
+package com.zakir.java;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class Class1 implements java.io.Serializable
+{
+	WebDriver myDriver = new FirefoxDriver();
+	static boolean  browserLaunched = false;
+	static String executionState = "Initialized";
+	
+	public void setBrowser() {
+		myDriver.get("www.cnico.com");
+		browserLaunched = true;
+		executionState += "setBrowserExecuted";
+	}
+
+	public void closeBrowser() {
+		myDriver.close();
+	}
+	
+	
+}
+
+

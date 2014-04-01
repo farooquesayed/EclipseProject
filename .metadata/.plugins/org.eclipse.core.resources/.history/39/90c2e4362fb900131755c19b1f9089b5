@@ -1,0 +1,24 @@
+package com.zakir.java;
+
+public class Employee implements java.io.Serializable, Company
+{
+   public static String name;
+   public String address;
+   public transient int SSN;
+   public int number;
+   public void mailCheck()
+   {
+      System.out.println("Mailing a check to " + name
+                           + " " + address);
+   }
+@Override
+public void Humangroup() {
+	
+	
+}
+@Override
+public void Machinegroup() {
+	// TODO Auto-generated method stub
+	
+}
+}

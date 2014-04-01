@@ -4,7 +4,7 @@ import java.util.Date;
 
 import javax.jws.WebMethod;
 
-import com.eviware.soapui.tools.SoapUITestCaseRunner;
+//import com.eviware.soapui.tools.SoapUITestCaseRunner;
 
 public class Car {
     private Integer fuelLevel;

@@ -1,0 +1,24 @@
+package com.zakir.java;
+
+import java.io.IOException;
+
+
+public class Class3 {
+	public static void main(String args[]) {
+		Class1 wdDeserialize = null;
+		try
+		{
+			
+		}
+		catch(IOException i)
+	      {
+	         i.printStackTrace();
+	         return;
+	      }
+		catch(ClassNotFoundException c) {
+			System.out.println("WebDriver class not found");
+			c.printStackTrace();
+			return;
+		}
+	}
+}
