@@ -1,0 +1,22 @@
+package Common;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+public class WebDriverFunctions {
+
+	public void mouseOver(WebDriver myDriver, By objBy) {
+		Actions action = new Actions(myDriver);
+		WebElement we = myDriver.findElement(objBy);
+		action.moveToElement(we).build().perform();
+	}
+
+	public void mouseOver(WebDriver myDriver, By Hover_objBy, By Click_objBy) {
+		Actions action = new Actions(myDriver);
+		WebElement we = myDriver.findElement(Hover_objBy);
+		action.moveToElement(we).moveToElement(myDriver.findElement(Click_objBy)).click().build().perform();
+	}
+	
+}

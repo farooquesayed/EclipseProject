@@ -1,0 +1,17 @@
+Requirements:
+
+http://www.bankrate.com/
+
+Compare Rates cases
+- hover mouse and make a note of the numbers for each tabs
+- Save those values to database with date stamp
+- Alert when the value is lowest for any row. Only Rate row needs logging and comparison.
+	
+
+Mortgages page
+- Select Purchase radiobutton
+- Make a random State value and random city and Search
+- Look for 'Sebonic Financial' as lender 
+- If 'Sebonic Financial' is found then open it.
+- Verify all the information available in Get Quote page.
+

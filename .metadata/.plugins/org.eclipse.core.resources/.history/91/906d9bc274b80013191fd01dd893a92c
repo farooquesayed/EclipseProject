@@ -1,0 +1,28 @@
+package CompareRates;
+
+import java.sql.DriverManager;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import Common.WebDriverFunctions;
+
+public class CompareRateCases extends WebDriverFunctions {
+	private static WebDriver myDriver;
+	
+	public CompareRateCases() {
+		myDriver = Main.DRIVER;
+	}
+	
+	public void getMortgageRates() {
+		mouseOver(myDriver, By.xpath("//*[@id=\"OAmultiModule\"]/div[2]/table[1]/tbody/tr/td[1]"));
+		
+		//*[@id=\"OAmultiModule\"]/div[2]/table[1]/tbody/tr/td[1]
+		
+		/// This is to click the link
+		//*[@id=\"OAmultiModule\"]/div[2]/table[2]/tbody/tr[1]/td[2]/a	
+		
+		
+	}
+	
+}

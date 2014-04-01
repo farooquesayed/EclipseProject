@@ -1,0 +1,22 @@
+package CompareRates;
+
+
+
+
+public class MainCompareRates {
+
+	public static void main(String args[]) {
+		try
+		{
+			SQL_Queries qry1 = new SQL_Queries();
+			qry1.insertInto_BankRate("ZakirTest", 55);
+		}
+		catch (Exception e)
+		{
+		  System.err.println("Got an exception! ");
+		  System.err.println(e.getMessage());
+		}
+		
+		System.out.println("END");
+	}
+}
