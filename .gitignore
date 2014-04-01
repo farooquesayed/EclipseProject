@@ -2,10 +2,18 @@
 ## Eclipse
 #################
 
-bin/
-tmp/
-*.tmp
-*.bak
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
 
 # External tool builders
 .externalToolBuilders/
@@ -16,6 +24,40 @@ tmp/
 # PDT-specific
 .buildpath
 
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/test/tmp/
+/test/version_tmp/
+/tmp/
+
+## Specific to RubyMotion:
+.dat*
+.repl_history
+build/
+
+## Documentation cache and generated files:
+/.yardoc/
+/_yardoc/
+/doc/
+/rdoc/
+
+## Environment normalisation:
+/.bundle/
+/lib/bundler/man/
+
+# for a library or gem, you might want to ignore these files since the code is
+# intended to run in multiple environments; otherwise, check them in:
+# Gemfile.lock
+# .ruby-version
+# .ruby-gemset
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.rvmrc
 
 #################
 ## Visual Studio
@@ -66,109 +108,6 @@ build/
 *.log
 *.scc
 
-# Visual C++ cache files
-ipch/
-*.aps
-*.ncb
-*.opensdf
-*.sdf
-*.cachefile
-
-# Visual Studio profiler
-*.psess
-*.vsp
-*.vspx
-
-# Guidance Automation Toolkit
-*.gpState
-
-# ReSharper is a .NET coding add-in
-_ReSharper*/
-*.[Rr]e[Ss]harper
-
-# TeamCity is a build add-in
-_TeamCity*
-
-# DotCover is a Code Coverage Tool
-*.dotCover
-
-# NCrunch
-*.ncrunch*
-.*crunch*.local.xml
-
-# Installshield output folder
-[Ee]xpress/
-
-# DocProject is a documentation generator add-in
-DocProject/buildhelp/
-DocProject/Help/*.HxT
-DocProject/Help/*.HxC
-DocProject/Help/*.hhc
-DocProject/Help/*.hhk
-DocProject/Help/*.hhp
-DocProject/Help/Html2
-DocProject/Help/html
-
-# Click-Once directory
-publish/
-
-# Publish Web Output
-*.Publish.xml
-*.pubxml
-
-# NuGet Packages Directory
-## TODO: If you have NuGet Package Restore enabled, uncomment the next line
-#packages/
-
-# Windows Azure Build Output
-csx
-*.build.csdef
-
-# Windows Store app package directory
-AppPackages/
-
-# Others
-sql/
-*.Cache
-ClientBin/
-[Ss]tyle[Cc]op.*
-~$*
-*~
-*.dbmdl
-*.[Pp]ublish.xml
-*.pfx
-*.publishsettings
-
-# RIA/Silverlight projects
-Generated_Code/
-
-# Backup & report files from converting an old project file to a newer
-# Visual Studio version. Backup files are not needed, because we have git ;-)
-_UpgradeReport_Files/
-Backup*/
-UpgradeLog*.XML
-UpgradeLog*.htm
-
-# SQL Server files
-App_Data/*.mdf
-App_Data/*.ldf
-
-#############
-## Windows detritus
-#############
-
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Mac crap
-.DS_Store
 
 
 #############
