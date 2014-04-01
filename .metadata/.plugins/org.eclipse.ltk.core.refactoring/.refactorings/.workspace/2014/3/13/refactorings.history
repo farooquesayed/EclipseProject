@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;WebDriver_Concurrency&apos;" deleteContents="false" description="Delete resource &apos;WebDriver_Concurrency&apos;" element1="/WebDriver_Concurrency" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1395982141061"/>&#x0A;<refactoring comment="Delete resource &apos;TestProject&apos;" deleteContents="false" description="Delete resource &apos;TestProject&apos;" element1="/TestProject" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1395982151297"/>
-</session>
