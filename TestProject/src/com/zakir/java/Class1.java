@@ -1,35 +1,25 @@
 package com.zakir.java;
 
-import java.io.File;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
-import org.junit.Test;
 
-
-public class Class1 
+public class Class1 implements java.io.Serializable
 {
+	WebDriver myDriver; // = new FirefoxDriver();
 
-	public int counter=0;
-	
-//	public Class1() {
-//		
-//	}
-	
-	@Test
-	public void testFolderLocation() {
-		//File f = new File(IEDriverServerLocation);
-		
-		System.out.println(System.getProperty("user.dir"));
-	}
-		
+	boolean  browserLaunched = false;
+	String executionState = "Initialized";
 	
 	public Class1() {
-		// TODO Auto-generated constructor stub
+		browserLaunched = true;
+		executionState += "setBrowserExecuted";
 	}
 
-
-	public void printCounter() {
-		System.out.println(this.counter);
+	public void closeBrowser() {
+		myDriver.close();
 	}
+	
 	
 }
 

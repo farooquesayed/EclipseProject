@@ -222,5 +222,11 @@ public class NewQuote extends CommonLibrary {
 		DRIVER.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 	}
+	
+	public String getQuoteNumber() {
+		
+		return DRIVER.findElement(By.id("QH_QuoteNumber")).getText();
+//		return "No Quote Number found";
+	}
 
 }

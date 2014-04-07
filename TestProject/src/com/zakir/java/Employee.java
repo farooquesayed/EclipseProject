@@ -1,0 +1,29 @@
+package com.zakir.java;
+
+public class Employee implements java.io.Serializable, Company
+{
+   public String name;
+   public String address;
+   public transient int SSN;
+   public int number;
+   public Employee() {
+	   System.out.println("Employee min count should be " + Company.headcount);
+   }
+   
+   public void mailCheck()
+   {
+      System.out.println("Mailing a check to " + name
+                           + " " + address);
+   }
+	@Override
+	public void Humangroup() {
+		System.out.println("Writing from Humangroup");
+		
+	}
+	
+	@Override
+	public void Machinegroup() {
+		System.out.println("Writing from Machinegroup");
+		
+	}
+}
